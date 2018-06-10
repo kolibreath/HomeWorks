@@ -11,30 +11,26 @@ CCircleRect::CCircleRect(CRect& rect, CCircle& circle,int color,int linewidth)
 
 }
 
- void CCircleRect::Show(){
 
-    }
+void CCircleRect::showMessage(){
 
-void CCircleRect::ShowMsg(){
-
-    CGraph::Show();
-    CRect::Show();
-    CCircle::Show();
-    Show();
+    CGraph::show();
+    CRect::showMessage();
+    CCircle::showMessage();
 }
 
 
-void CCircleRect::Save(fstream& file){
+void CCircleRect::save(fstream &file){
 
-    CGraph::Save(file);
-	CRect::SaveP(file);
-    CCircle::SaveP(file);
+    CGraph::save(file);
+    CRect::saveP(file);
+    CCircle::saveP(file);
 
 }
 
-void CCircleRect::Load(fstream& file){
-    
-	CRect::Load(file);
-    CCircle::Load(file);
+void CCircleRect::load(fstream &file){
+
+    CRect::load(file);
+    CCircle::load(file);
 
 }

@@ -15,12 +15,13 @@ public:
     CRect(Point & pt, int width =0, int height = 0,int color=0,int linewidth=1);
     CRect(CRect& rect);
 	CRect(int color=0,int linewidth=1):CGraph(2,color,linewidth){};
-    void Show();
-    virtual void ShowMsg();
+
+
+    virtual void showMessage();
 	
-	void SaveP(fstream& file);
-    void Save(fstream& file);
-	void Load(fstream& file);
+	void saveP(fstream &file);
+    void save(fstream &file);
+	void load(fstream &file);
 	
 
 };

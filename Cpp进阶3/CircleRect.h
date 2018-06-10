@@ -14,12 +14,13 @@ public:
 
 	CCircleRect(int color=0,int linewidth=1):CGraph(1,color,linewidth){};
 
-    void Show();
-    virtual void ShowMsg();
+    void show();
 
-	void Save(fstream& file);
+    virtual void showMessage();
 
-	void Load(fstream& file);
+	void save(fstream &file);
+
+	void load(fstream &file);
 
 };
 

@@ -9,6 +9,8 @@
 
 #include "Rect.h"
 
+
+
 class CMotion{
 public :
     template <class  T>
@@ -16,7 +18,25 @@ public :
     if(typeCheck(t)){
         T *t_p = &t;
         CPage *c  = dynamic_cast<T*>(t_p);
-        c->pGraphs.clear();
+        char * figure = new char;
+        int type = 0;
+        int types;
+        for(int i = 0;i<c->pGraphs.size();i++){
+            type =  c->pGraphs.dequeue()->Type;
+            switch (type){
+                case CIRCLE:
+                    figure = "Circle";
+                    break;
+                case CIRCLERECT:
+                    figure = "CircleRect";
+                    break;
+                case CRECT:
+                    figure = "Rect";
+                    break;
+            }
+
+            cout<<figure<<" slides out"<<endl;
+        }
     }else
         cout<<"the figure slides out"<<endl;
     }

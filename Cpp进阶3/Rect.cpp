@@ -16,20 +16,16 @@ CRect::CRect(CRect& rect):CGraph(2){
      Height = rect.Height;
 }
 
- void CRect::Show(){
 
+void CRect::showMessage(){
+
+    CGraph::show();
     cout<<endl<<"\t Point:"<<Pt.X<<","<<Pt.Y <<" \t Width: "<<Width
        <<"\t  Height: "<<Height<<endl;
-    }
-
-void CRect::ShowMsg(){
-
-    CGraph::Show();
-    Show();
 }
 
 
-void CRect::SaveP(fstream& file){
+void CRect::saveP(fstream &file){
     
     file.write((char*)&Pt.X,sizeof(Pt.X));
 	file.write((char*)&Pt.Y,sizeof(Pt.Y));
@@ -37,7 +33,7 @@ void CRect::SaveP(fstream& file){
 	file.write((char*)&Width,sizeof(Width));
 }
 
-void CRect::Load(fstream& file){
+void CRect::load(fstream &file){
     
     file.read((char*)&Pt.X,sizeof(Pt.X));
 	file.read((char*)&Pt.Y,sizeof(Pt.Y));
@@ -45,8 +41,8 @@ void CRect::Load(fstream& file){
 	file.read((char*)&Width,sizeof(Width));
 }
 
-void CRect::Save(fstream& file){
+void CRect::save(fstream &file){
 
-    CGraph::Save(file);
-    SaveP(file);
+    CGraph::save(file);
+    saveP(file);
 }

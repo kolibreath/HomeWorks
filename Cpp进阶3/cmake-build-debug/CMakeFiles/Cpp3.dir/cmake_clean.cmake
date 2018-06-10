@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Cpp3.dir/main.cpp.o"
   "CMakeFiles/Cpp3.dir/Circle.cpp.o"
   "CMakeFiles/Cpp3.dir/CircleRect.cpp.o"
-  "CMakeFiles/Cpp3.dir/Graph.cpp.o"
   "CMakeFiles/Cpp3.dir/Rect.cpp.o"
   "Cpp3.pdb"
   "Cpp3"

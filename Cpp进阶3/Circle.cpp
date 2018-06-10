@@ -3,30 +3,24 @@
 #include "Circle.h"
 using namespace std;
 
-CCircle::CCircle(Point & pt, int radiu ,int color,int linewidth)
-:CGraph( 1,color,linewidth){
+CCircle::CCircle(Point & pt, int radiu ,int color,int linewidth) :CGraph( 1,color,linewidth){
      Pt = pt;
      Radiu = radiu;
 }
 
-CCircle::CCircle(CCircle & circle)
-:CGraph(1){
+CCircle::CCircle(CCircle & circle) :CGraph(1){
      Pt = circle.Pt;
      Radiu = circle.Radiu;
 }
 
- void CCircle::Show(){
 
+void CCircle::showMessage(){
+
+    CGraph::show();
     cout<<endl<<"\t Point:"<<Pt.X<<","<<Pt.Y <<" \t Radiu: "<<Radiu
        <<endl;
-    }
-
-void CCircle::ShowMsg(){
-
-    CGraph::Show();
-    Show();
 }
-void CCircle::SaveP(fstream& file){
+void CCircle::saveP(fstream& file){
 
     
     file.write((char*)&Pt.X,sizeof(Pt.X));
@@ -34,14 +28,14 @@ void CCircle::SaveP(fstream& file){
 	file.write((char*)&Radiu,sizeof(Radiu));	
 }
 
-void CCircle::Save(fstream& file){
+void CCircle::save(fstream &file){
 
-    CGraph::Save(file);
-    SaveP( file);
+    CGraph::save(file);
+    saveP( file);
 	
 }
 
-void CCircle::Load(fstream& file){
+void CCircle::load(fstream &file){
     
     file.read((char*)&Pt.X,sizeof(Pt.X));
 	file.read((char*)&Pt.Y,sizeof(Pt.Y));

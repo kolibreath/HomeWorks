@@ -8,13 +8,14 @@
 #include "Circle.h"
 #include "CircleRect.h"
 #include "vector"
-#include "ContainerV.h"
+#include "QueueV.h"
 class CPage{
 private :
     int noumber;
 
 public:
-    ContainerV<CGraph*> pGraphs;
+    QueueV<CGraph*> pGraphs;
+
     CPage(){
         noumber = 0;
     }
@@ -23,27 +24,27 @@ public:
         noumber = 0;
     }
 
-    void AddGraphs(CGraph* graph){
-        pGraphs.insert(graph);
+    void insertGraphs(CGraph *graph){
+        pGraphs.enqueue(graph);
         noumber++;
     }
 
-    void ShowGraphs(){
+    void showGraphs(){
 
         for(int i=0;i<noumber;i++)
-            pGraphs[i]->ShowMsg();
+            pGraphs[i]->showMessage();
     }
 	
 
-     void Save(fstream & file){
+     void save(fstream &file){
 
          file.write((char*)&noumber,sizeof(noumber));
 
          for(int i=0;i<noumber;i++)
-             pGraphs[i]->Save(file);
+             pGraphs[i]->save(file);
      }
 
-     void Load(fstream & file){
+     void load(fstream &file){
 
          int numg = 0;
 
@@ -70,8 +71,8 @@ public:
                      break;
              }
 
-             g->Load(file);
-             AddGraphs(g);
+             g->load(file);
+             insertGraphs(g);
 
          }
 

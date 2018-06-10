@@ -15,13 +15,12 @@ public:
     CCircle(CCircle& circle);
 	CCircle(int color=0,int linewidth=1):CGraph(1,color,linewidth){};
     ~CCircle(){};
-    void Show();
-    virtual void ShowMsg();
+    virtual void showMessage();
 
-    void SaveP(fstream& file);
-    void Save(fstream& file);
+    void saveP(fstream& file);
+    void save(fstream &file);
 
-	void Load(fstream& file);
+	void load(fstream &file);
 	
 
 };
