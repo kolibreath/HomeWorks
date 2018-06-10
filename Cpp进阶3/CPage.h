@@ -9,74 +9,77 @@
 #include "CircleRect.h"
 #include "vector"
 #include "QueueV.h"
-class CPage{
+class   CPage{
 private :
-    int noumber;
 
 public:
     QueueV<CGraph*> pGraphs;
 
     CPage(){
-        noumber = 0;
     }
     ~CPage(){
         pGraphs.clear();
-        noumber = 0;
     }
 
     void insertGraphs(CGraph *graph){
         pGraphs.enqueue(graph);
-        noumber++;
     }
 
     void showGraphs(){
 
-        for(int i=0;i<noumber;i++)
+        for(int i=0;i<pGraphs.size();i++)
             pGraphs[i]->showMessage();
     }
 	
 
-     void save(fstream &file){
+     void save(char *loc){
 
-         file.write((char*)&noumber,sizeof(noumber));
+        int number = pGraphs.size();
+         fstream file ;
+         file.open(loc,ios::in|ios::out|ios::binary|ios::trunc);
+         file.write((char*)&number,sizeof(number));
 
-         for(int i=0;i<noumber;i++)
+         for(int i=0;i<number;i++)
              pGraphs[i]->save(file);
-     }
 
-     void load(fstream &file){
+         file.close();
+    }
 
-         int numg = 0;
+    void load(char *loc){
 
-         file.read((char*)&numg,sizeof(noumber));
-         int type,color,lw;
+        int numg = 0;
+        fstream file;
+        file.open(loc,ios::in|ios::binary);
+        file.read((char*)&numg,sizeof(pGraphs.size()));
+        int type,color,lw;
 
-         CGraph * g;
+        CGraph * g;
 
-         for(int i=0;i<numg;i++){
+        for(int i=0;i<numg;i++){
 
-             file.read((char*)&type, sizeof(type));
-             file.read((char*)&color, sizeof(color));
-             file.read((char*)&lw, sizeof(lw));
+            file.read((char*)&type, sizeof(type));
+            file.read((char*)&color, sizeof(color));
+            file.read((char*)&lw, sizeof(lw));
 
-             switch (type){
-                 case 1:
-                     g = new CCircle(color,lw);
-                     break;
-                 case 2:
-                     g = new CRect(color,lw);
-                     break;
-                 case 3:
-                     g = new CCircleRect(color,lw);
-                     break;
-             }
 
-             g->load(file);
-             insertGraphs(g);
+            switch (type){
+                case 1:
+                    g = new CCircle(color,lw);
+                    break;
+                case 2:
+                    g = new CRect(color,lw);
+                    break;
+                case 3:
+                    g = new CCircleRect(color,lw);
+                    break;
+            }
 
-         }
+            g->load(file);
+            insertGraphs(g);
 
-     }
+        }
+        file.close();
+    }
 
 };
 

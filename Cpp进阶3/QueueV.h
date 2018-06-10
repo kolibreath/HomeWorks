@@ -47,4 +47,11 @@ public:
     void clear(){
         container.clear();
     }
+
+    QueueV clone(){
+        QueueV queueV;
+        vector<T> cloneContainer (container);
+        queueV.container = cloneContainer;
+        return queueV;
+    }
 };

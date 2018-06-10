@@ -6,6 +6,7 @@
 #include "CircleRect.h"
 #include "CPage.h"
 #include "CMotion.h"
+#include "CppDocument.h"
 using namespace std;
 
 
@@ -29,16 +30,12 @@ int main()
 	page.showGraphs();
 
 	fstream file ;
-	file.open("record.dat",ios::in|ios::out|ios::binary|ios::trunc);
-	page.save(file);
-	file.close();
+	page.save("record.dat");
 
 	cout<<"Page Saved:........"<<endl;
 
 	CPage page1;
-	file.open("record.dat",ios::in|ios::binary);
-	page1.load(file);
-	file.close();
+	page1.load("record.dat");
 
 	cout<<"Page1, Loaded:........"<<endl;
 	page1.showGraphs();
@@ -52,5 +49,9 @@ int main()
 	page1.insertGraphs(&circle1);
 	page1.insertGraphs(&circle2);
 	cMotion.slideOut(page1);
+
+	CppDocument cppDocument;
+	cppDocument.enqueue(page1);
+	cppDocument.dequeue();
     return 0;
 }
