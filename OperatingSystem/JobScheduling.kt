@@ -1,3 +1,4 @@
+import com.sun.crypto.provider.JceKeyStore
 import java.util.*
 
 const val wait = 0
@@ -20,6 +21,8 @@ class JCB constructor(val name:String,
                       val resource:String,
                       val status:Int,
                       val jobQueue: Queue<JCB>){
+
+    var priority = 1
 }
 
 /**
@@ -193,10 +196,13 @@ fun hrn(jobQueue:Queue<JCB>):LinkedList<JCB>{
 fun initJobs():LinkedList<JCB> {
 
     val job1 = JCB(name = "job1", handinTime = "8:00", worktime = 120, realWorkTime = 0, weight = 0, finishTime = "10:00", resource = "CPU", status = wait, jobQueue = jobQueue)
+    job1.priority = 5
     val job2 = JCB(name = "job2", handinTime = "8:50", worktime = 50, realWorkTime = 0, weight = 0, finishTime = "10:00", resource = "CPU", status = wait, jobQueue = jobQueue)
+    job2.priority = 3
     val job3 = JCB(name = "job3", handinTime = "9:00", worktime = 10, realWorkTime = 0, weight = 0, finishTime = "10:00", resource = "CPU", status = wait, jobQueue = jobQueue)
+    job3.priority = 4
     val job4 = JCB(name = "job4", handinTime = "9:50", worktime = 20, realWorkTime = 0, weight = 0, finishTime = "10:00", resource = "CPU", status = wait, jobQueue = jobQueue)
-
+    job4.priority = 6
     return LinkedList<JCB>().apply {
         add(job1)
         add(job2)
@@ -205,10 +211,111 @@ fun initJobs():LinkedList<JCB> {
     }
 }
 
+/**
+ * 多道程序的先来先服务算法
+ * 先实现一个两道批处理程序 作业调度是先来先服务 进程调度是 优先级
+ */
+fun multiFcfs(jobQueue: Queue<JCB>,
+              memoryList:LinkedList<JCB>,
+              finJobs:LinkedList<JCB>,
+              currentJob:Pair<String,JCB>){
+
+    var curJobCopy = currentJob
+
+    //当前的时间
+    var curTime = curJobCopy.first
+
+    //填充内存
+    while (!jobQueue.isEmpty()){
+        val runningJob = curJobCopy.second
+
+        for(job in jobQueue) {
+            if (elapse(job.handinTime, curTime) >= 0 && (memoryList.size <= 2) && !memoryList.contains(job)) {
+                memoryList.add(job)
+            }
+        }
+
+        //进行进程调度 从内存中找出优先级最高的作业进行调度
+        fun findHightestPriority(memoryList: LinkedList<JCB>): JCB{
+            var runningJob = memoryList[0]
+            var lowestPriority = runningJob.priority
+            for(job in memoryList){
+                if(lowestPriority > job.priority){
+                    lowestPriority = job.priority
+                    runningJob = job
+                }
+            }
+            return runningJob
+        }
+
+        val dueJob = findHightestPriority(memoryList)
+        lateinit var interruptJob:JCB
+
+        //这个程序在运行的时候能否被中断？
+        fun canbeInterrupted(interruptList:LinkedList<JCB>):Boolean{
+            val startTime = dueJob.handinTime
+            val endTime = dueJob.finishTime
+            for(interruptTime in interruptList){
+                //在时间上和在优先级上都要做判断
+                if(elapse(handinTime = startTime,startTime = interruptTime.handinTime) >=0
+                        && elapse(handinTime = interruptTime.handinTime,startTime = endTime)>=0
+                        && interruptTime.priority < dueJob.priority){
+                    interruptJob = interruptTime
+                    return true
+                }
+            }
+            return false
+        }
+          val maybeInterrupt = canbeInterrupted(interruptList = jobQueue as LinkedList<JCB>)
+
+        //如果中断了
+        if(maybeInterrupt){
+            val currentTime  = elapse(handinTime = dueJob.handinTime,
+                    worktime = elapse(dueJob.handinTime,interruptJob.handinTime))
+
+            memoryList.add(interruptJob)
+
+            multiFcfs(jobQueue = jobQueue,
+                    memoryList =  memoryList,
+                    finJobs = finJobs,
+                    currentJob =  Pair(first = currentTime,second = dueJob ))
+        }else{
+            //如果没有中断
+            val elapsedWaitingTime = elapse(dueJob.handinTime,curTime)
+            val finTime =  elapse(dueJob.handinTime,dueJob.worktime + elapsedWaitingTime)
+            curTime = finTime
+
+            val finJob = dueJob.getCompleteJobs(
+                    realWorkTime =  dueJob.worktime + elapsedWaitingTime,
+                    weight =  (dueJob.worktime + elapsedWaitingTime)/dueJob.worktime,
+                    finishTime = finTime
+            )
+            finJobs.add(finJob)
+
+
+            jobQueue.remove(dueJob)
+
+
+            memoryList.remove(dueJob)
+            if(memoryList.isEmpty())
+                return
+            curJobCopy = Pair(first = curTime,second = memoryList[0])
+
+        }
+    }
+}
+
+
 
 
 fun main(args:Array<String>){
-     val finJobs = hrn(jobQueue = initJobs())
+     val finJobs =LinkedList<JCB>()
+    val jobs = initJobs()
+    multiFcfs(jobQueue = jobs,
+            memoryList = LinkedList<JCB>(),
+            finJobs = finJobs,
+            currentJob = Pair(first = jobs[0].handinTime,second = jobs[0]))
+
      for (job in finJobs)
-         println(job.finishTime)
+         println(job.name + "   "+job.finishTime)
 }
