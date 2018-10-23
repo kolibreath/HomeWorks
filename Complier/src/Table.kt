@@ -38,6 +38,5 @@ fun initTable(){
         put("<=",38)
         put("==",39)
         put("!=",40)
-        put("error",41)
     }
 }

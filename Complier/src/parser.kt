@@ -1,3 +1,4 @@
+import java.io.*
 import java.lang.IllegalArgumentException
 import java.util.regex.Pattern
 
@@ -14,8 +15,8 @@ fun parse(sourceString :String){
     val keySet = table.keys
 
     for(i in array){
-        //是一个关键字
         when {
+        //是一个关键字
             i in keySet -> result.add(Pair(first = i,second = table[i]!!))
         //可能是一个标示符
             isIdentifier(i) -> result.add(Pair(first = i,second = 10))
@@ -23,7 +24,7 @@ fun parse(sourceString :String){
             else ->
                 //只可能是一个表达式
                 //或者是一个block
-                parseDetail2(i)
+                parseDetail(i)
         }
     }
 }
@@ -37,7 +38,6 @@ fun isNumber(source:String):Boolean{
         parse  = parse.substring(2,source.length)
 
     parse.forEach {
-        //todo char 类型的转换的结果
         val i = it.toInt() - 48
         if(i !in 0 .. 9){
             return false
@@ -46,27 +46,14 @@ fun isNumber(source:String):Boolean{
     return true
 }
 fun isIdentifier(source:String):Boolean{
-    var flag = false
-    if(source[0] in 'a' ..'z' || source[0] in 'A' .. 'Z' ){
-        if(source.length == 1)
-            return true
-
-        source.substring(1,source.length).toCharArray().forEach {
-            //todo 这里可能会有bug
-            if(it !in 'a' .. 'z' || it !in 'A'.. 'Z' || it.toInt() !in 0 .. 9 ){
-                return false
-            }
-        }
-        flag =true
-    }
-    return flag
+    val pattern = Pattern.compile("[_]*[a-z|A-Z|\\u4e00-\\u9fa5][0-9|a-z|A-Z]*")
+    return pattern.matcher(source).matches()
 }
 
 private fun parseDetail(source: String) {
     var i = 0
     while (i < source.length) {
         when (source[i]) {
-        //todo 判断i+1是否可行private fun parseDetail(testCase1: String)
             '<' ->
                 if (i + 1 < source.length && source[i + 1] == '=') {
                     //向result 中添加 <=
@@ -135,76 +122,39 @@ private fun parseDetail(source: String) {
             }
             else -> {
                 //如果是数字
-                if (Character.isDigit(source[i])) {
-                    var number = ""
-                    while (i < source.length && Character.isDigit(source[i])) {
-                        number += source[i++]
+                when {
+                    Character.isDigit(source[i]) -> {
+                        var number = ""
+                        while (i < source.length && Character.isDigit(source[i])) {
+                            number += source[i++]
+                        }
+                        result.add(Pair(number, 11))
                     }
-                    result.add(Pair(number, 11))
-                } else if (source[i].isAlphaBetic()) {
-                    var ide = ""
-                    while (i < source.length && source[i].isAlphaBetic()) {
-                        ide += source[i++]
+                    source[i].isChar() -> {
+                        var ide = ""
+                        while (i < source.length && source[i].isChar()) {
+                            ide += source[i++]
+                        }
+                        result.add(Pair(ide, 10))
                     }
-                    result.add(Pair(ide, 10))
-                } else {
-                    throw IllegalArgumentException("没有这样的运算符${source[i]}")
+                    else -> throw IllegalArgumentException("没有这样的运算符${source[i]}")
                 }
             }
         }
     }
 }
 
-private fun parseDetail2(source: String){
-    val number   = "[0=9]"
-    val variable = "[a-z][a-z|0-9]*"
-    //正则表达式匹配是贪心和懒惰的
-    //匹配出来一个表达式后要检验 比如 会出现 /- 的情况...
-    val op = "[-+*/][-+*/]*=*"
-    //匹配的case 可能是
-    // xy1234 = 1
-    // xysomething += something
-    //没有做类型检查
-    val expression = "([a-z][a-z|0-9]*)([-+*/:=][-+*/]*=*)([a-z|0-9]+)"
-    val pattern = Pattern.compile(expression)
-    val mattcher = pattern.matcher(source.replace(" ",""))
+fun Char.isChar():Boolean = this in 'a' .. 'z' || this in 'A' .. 'Z'
 
-    lateinit var leftNode :String
-    lateinit var ops :String
-    lateinit var rightNode :String
-
-    if(mattcher.find()){
-        leftNode = mattcher.group(1)
-        ops = mattcher.group(2)
-        rightNode = mattcher.group(3)
-    }
-
-    //检查提取的运算符类型
-    if(!table.keys.contains(ops))
-        result.add(Pair(ops,41))
-
-    result.add(Pair(ops,table[ops]!!))
-
-    //如果不是变量类型将会也保存 但是是语法错误的
-    //左值一定是变量类型
-    result.add(Pair(leftNode,10))
-
-    //可能没有右边的值
-    if(rightNode == null)
-        return;
-    if(isIdentifier(rightNode))
-        result.add(Pair(rightNode,10))
-    else
-        result.add(Pair(rightNode,11))
+fun file2Code(src:String):String{
+   val file  =File(src)
+    return file.readText()
 }
-
-
-fun Char.isAlphaBetic():Boolean = this in 'a' .. 'z' || this in 'A' .. 'Z'
 
 fun main(args:Array<String>){
 
-//   val f =  isNumber("0")
-    parse(sourceString = testCase3)
+    val source = file2Code("/home/kolibreath/githubProject/complier/src/TestCase.txt")
+    parse(sourceString = source)
 
     result.forEach {
         println(it)
