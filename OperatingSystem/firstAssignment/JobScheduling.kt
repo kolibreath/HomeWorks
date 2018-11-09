@@ -275,7 +275,7 @@ fun multiFcfs(jobQueue: Queue<JCB>,
 
             memoryList.add(interruptJob)
 
-            multiFcfs(jobQueue = jobQueue,
+            mulqtiFcfs(jobQueue = jobQueue,
                     memoryList =  memoryList,
                     finJobs = finJobs,
                     currentJob =  Pair(first = currentTime,second = dueJob ))
