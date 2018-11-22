@@ -13,5 +13,5 @@
 - visual studio 基本配置和问题[解决](https://github.com/kolibreath/Notes/blob/master/os/MFCWindows.md)
 
 ## 作业
-- 实现一个风车 圆形 然后有三块 按照时间转动
-- 输出一个逐渐变大且换行的字体，page 126 4-7
+- 实现一个风车 圆形 然后有三块 按照时间转动 windMill.c
+- 输出一个逐渐变大且换行的字体，page 126 4-7 WaterfallText.c
