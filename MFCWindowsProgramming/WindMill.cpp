@@ -68,13 +68,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 	HPEN hpen;
 	HBRUSH hbrush;
 
-	//风车的半径 和 中心坐标
+	//风车的半径 和 中心坐标 
 	int xOrg, yOrg, rWinmill;
-
-
-	int line1StartX = 0, line1EndX = 0, line1StartY = 0, line1EndY = 0;
-	int line2StartX = 0, line2EndX = 0, line2StartY = 0, line2EndY = 0;
-	int line3StartX = 0, line3EndX = 0, line3StartY = 0, line3EndY = 0;
 
 	switch (message)
 	{
@@ -99,16 +94,16 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
         alpha ++;
 
 		rWinmill = min(xOrg, yOrg) - 50;
-		Ellipse(hdc, xOrg - rWinmill, yOrg - rWinmill, xOrg + rWinmill, yOrg + rWinmill);
-
-
 		int rectLeftTopX = xOrg - rWinmill, rectLeftTopY = yOrg - rWinmill, rectBottomX = xOrg + rWinmill, rectBottomY = yOrg + rWinmill;
-
-		double angle = 3.14159276 / 180 ;
-
 
 		hbrush = CreateSolidBrush(RGB(200, 255, 200));
 		SelectObject(hdc, hbrush);
+
+		// 当 alpha等于0 起始的形状类似于 奔驰的标志
+		// 从原点(xOrg,yOrg) ->  (aEndX,aEndY) 是一条边
+		// 从原点(xOrg,yOrg) ->  (bEndX,bEndY) 是一条边
+		// 从原点(xOrg,yOrg) ->  (cEndX,cEndY) 是一条边
+		//三条边的夹角是120度
 
         int aEndX = xOrg + rWinmill * sin((alpha )/180*PI );
         int aEndY = yOrg + rWinmill * cos((alpha )/ 180*PI);
@@ -123,13 +118,12 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
         int startY = yOrg;
 
 		//绘制饼图
-        //绘制饼图的颜色正确！！
 		Pie(hdc,
 			rectLeftTopX, rectLeftTopY,
 			rectBottomX, rectBottomY,
 			aEndX, aEndY,
 		    bEndX, bEndY);
-
+        //修改颜色绘制后续的饼图
         hbrush = CreateSolidBrush(RGB(255, 255, 200));
 		SelectObject(hdc, hbrush);
 
@@ -141,14 +135,13 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 
         hbrush = CreateSolidBrush(RGB(200, 255, 255));
 		SelectObject(hdc, hbrush);
+		
         Pie(hdc,
 			rectLeftTopX, rectLeftTopY,
 			rectBottomX, rectBottomY,
 			cEndX, cEndY,
 		    aEndX, aEndY);
 
-	
-		printf("%f 半径变形长度\n", cos(angle *60));
 
 	case WM_TIMER:
 		if (wParam == 9999) {
