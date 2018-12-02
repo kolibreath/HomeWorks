@@ -6,11 +6,22 @@
 #include <windows.h>
 #include<math.h>
 #include<stdio.h>
+#include "stdafx.h"
+#include <iostream>
+
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 int counter = 1;//存储点的数量
-static int flag = 0;
 
+HDC         hdc;
+PAINTSTRUCT ps;
+RECT rect;
+int x;
+int y;
+POINT pt;
+POINT array[10000];//存储点的坐标
+
+static int flag = 0;
 
 int index = 0;
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
@@ -63,17 +74,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	HDC         hdc;
-	PAINTSTRUCT ps;
-	RECT rect;
-	int x;
-	int y;
-	POINT pt;
-	POINT array[10000];//存储点的坐标
+	printf("%d", flag);
 	switch (message)
 	{
+
 	case WM_CREATE:
-		SetTimer(hwnd, 1111, 200, NULL);
+		SetTimer(hwnd, 1111, 100, NULL);
 		break;
 	case WM_TIMER:
 		if (wParam == 1111)
@@ -82,21 +88,16 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 	case WM_MOUSEMOVE:
 	{
-
-		//现存问题： 第一个点有问题！！！！
 		if (wParam&MK_LBUTTON) {
 			hdc = BeginPaint(hwnd, &ps);//获取设备环境指针
 			if (counter < 10000)
 			{
-				//x= LOWORD(lParam);
-				//y = HIWORD(lParam);
 				GetCursorPos(&pt);
 				ScreenToClient(hwnd, &pt);
 				array[counter].x = pt.x;
 				array[counter].y = pt.y;
-
+				//printf("x: %d, y: %d \n", pt.x, pt.y); //right
 				counter++;
-			
 			}
 		}
 		break;
@@ -104,43 +105,34 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_LBUTTONUP:
 	{
 		flag = 0;
-		for (int i = 0; i < counter; i++) {
-			array[i].x = 0;
-			array[i].y = 0;
-			SetPixel(hdc, array[i].x, array[i].y, RGB(255, 251, 240));
-		}
-		counter = 0;
-		
-		//InvalidateRect(hwnd, NULL, 1);
 		break;
 	}
 	case WM_LBUTTONDOWN:
 		flag = 1;
-		GetCursorPos(&pt);
-		//我认为需要移动到开始的点才可以继续
-		//初始化第一个点！
-		array[counter].x = pt.x;
-		array[counter].y = pt.y;
+		if (flag == 1) {
+			for (int i = 0; i < counter; i++) {
+				array[i].x = 0;
+				array[i].y = 0;
+				SetPixel(hdc, array[i].x, array[i].y, RGB(255, 255, 255));
+			}
+			counter = 0;
+			flag = 0;
+		}
 
-		MoveToEx(hdc, pt.x, pt.y, NULL);
-
-		counter++;
 		break;
 	case WM_PAINT:
-	{
-		if (flag == 1)
+		if (flag == 0)
 		{
 			hdc = BeginPaint(hwnd, &ps);
 			GetClientRect(hwnd, &rect);
-
-			for (int i = 0; i < counter; i++) {
+			for (int i = 0; i < counter-1; i++) {
 				MoveToEx(hdc, array[i].x, array[i].y, NULL);
 				LineTo(hdc, array[i + 1].x, array[i + 1].y);
 				SetPixel(hdc, array[i].x, array[i].y, RGB(0, 0, 0));
 			}
 		}
 		break;
-	}
+
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
@@ -150,6 +142,3 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 	}
 
 }
-
-
-
