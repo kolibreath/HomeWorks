@@ -16,5 +16,5 @@
 - 实现一个风车 圆形 然后有三块 按照时间转动 windMill.c
 - 输出一个逐渐变大且换行的字体，page 126 4-7 WaterfallText.c
 - 第三个作业是一个书上要求都写不清楚的画线作业 点击然后连线...
-- 第四个作业是输入相关数据然后插入到一个list的任务，特别感谢(@RawSharkill)[https://github.com/RawSharkill/homework]
-作业代码打包在(百度网盘)[https://pan.baidu.com/s/1BLtpWvuSp26CZW8aNlm3ew]
+- 第四个作业是输入相关数据然后插入到一个list的任务，特别感谢[@RawSharkill](https://github.com/RawSharkill/homework)
+作业代码打包在[百度网盘](https://pan.baidu.com/s/1BLtpWvuSp26CZW8aNlm3ew)
