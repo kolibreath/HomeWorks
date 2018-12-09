@@ -5,13 +5,18 @@ import java.util.regex.Pattern
 const val testCase1=  "begin x :=9; if x > 0 then x := 2*x + 1/3; end #"
 const val testCase2=  "begin x := 10; y=x; end #"
 const val testCase3 = "begin if x==1 then x := 2"
-val result = ArrayList<Pair<String,Int>>()
+var result = ArrayList<Pair<String,Int>>()
 
-fun parse(sourceString :String){
+fun parse(sourceString :String): ArrayList<Pair<String,Int>>{
     initTable()
 
+    val result = ArrayList<Pair<String,Int>>()
     //先将这个表达式大体分开
-    val array = sourceString.split(" ")
+
+    val regex = Regex("\\s+")
+    val temp = regex.replace(sourceString,"&").split("&").filter {
+        it != "" || it != " " }
+    val array = temp.filter { it !="" }
     val keySet = table.keys
 
     for(i in array){
@@ -24,9 +29,13 @@ fun parse(sourceString :String){
             else ->
                 //只可能是一个表达式
                 //或者是一个block
-                parseDetail(i)
+                // {
+                // }
+                parseDetail(i,result)
         }
     }
+
+    return result
 }
 
 fun isNumber(source:String):Boolean{
@@ -50,7 +59,7 @@ fun isIdentifier(source:String):Boolean{
     return pattern.matcher(source).matches()
 }
 
-private fun parseDetail(source: String) {
+private fun parseDetail(source: String,result:ArrayList<Pair<String,Int>>) {
     var i = 0
     while (i < source.length) {
         when (source[i]) {
@@ -120,6 +129,23 @@ private fun parseDetail(source: String) {
                 result.add(Pair("-",table["-"]!!))
                 i++
             }
+            '(' ->{
+                result.add(Pair("(",table["("]!!))
+                i++
+            }
+            ')' ->{
+                result.add(Pair(")",table[")"]!!))
+                i++
+            }
+
+            '{' ->{
+                result.add(Pair("{",table["{"]!!))
+                i++
+            }
+            '}' ->{
+                result.add(Pair("}",table["}"]!!))
+                i++
+            }
             else -> {
                 //如果是数字
                 when {
@@ -151,12 +177,3 @@ fun file2Code(src:String):String{
     return file.readText()
 }
 
-fun main(args:Array<String>){
-
-    val source = file2Code("/home/kolibreath/githubProject/complier/src/TestCase.txt")
-    parse(sourceString = source)
-
-    result.forEach {
-        println(it)
-    }
-}
