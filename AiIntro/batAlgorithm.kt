@@ -1,141 +1,122 @@
-import java.lang.Exception
 import java.util.*
 
 /***
  * the implementation of Bat Algorithm in Kotlin
  */
 
+
 //the number of variables in function f : f(x1,x2,x3,.....,xn)
 const val dimension = 3
 //the population of bats
 const val population = 500
 //the iteration times of bats
-const val generation = 500
-const val lowerBound = -4.0
-const val uppperBound = +4.0
+const val generation = 10000
+const val lowerBound = -5.0
+const val uppperBound = +5.0
 
-var variable = 0.01
-var pulseRate = 3
-var loudness = 7.toDouble()
-var decay = 0.95
+abstract class BatAlgorithm {
+    var variable = 1.0
+    var pulseRate = 3
+    var loudness = 10.toDouble()
+    var decay = 0.95
 
-val random = Random()
-/**
- * dont set the initial value to big!
- * better initialize with the upper bound and lower bound
- *
- * narrow down initial locations
- */
-val randomLocation= {
-    val random = lowerBound + (uppperBound- lowerBound) * random.nextDouble()
-    random
-}
-
-
-val batPopulationLocation = Array(population){
-    DoubleArray(dimension){
-        randomLocation.invoke()
+    val random = Random()
+    /**
+     * dont set the initial value to big!
+     * better initialize with the upper bound and lower bound
+     *
+     * narrow down initial locations
+     */
+    val randomLocation = {
+        val random = lowerBound + (uppperBound - lowerBound) * random.nextDouble()
+        random
     }
-}
 
-//2d array ith bat and the velocity in different direction
-val batPopulationVelocity = Array(population) {
-    DoubleArray(dimension) {
-        random.nextDouble()
+
+    val batPopulationLocation = Array(population) { DoubleArray(dimension) }
+
+    //2d array ith bat and the velocity in different direction
+    val batPopulationVelocity = Array(population) {
+        DoubleArray(dimension) {
+            random.nextDouble()
+        }
     }
-}
 
-val batPopulationFrequency = DoubleArray(population){
-    random.nextDouble()
-}
-
-val batPopulationPulseRate = DoubleArray(population){
-    0.5
-}
-
-var bestLocation  = batPopulationLocation[0]
-var bestValue  = objective(batPopulationLocation[0])
+    var bestLocation = batPopulationLocation[0]
+    var bestValue = 100000.0
 
 
+    fun initBats() {
 
-//the objective function
-fun objective(xi:DoubleArray):Double {
-    var sum :Double = 0.toDouble()
-    for(x in xi)
-        sum += x*x
+        //双重for循环
+        var i = 0
+        var j = 0
+        while (i < population) {
+            while (j < dimension) {
+                batPopulationLocation[i][j++] = randomLocation()
+            }
+            i++
+        }
+    }
 
-    return sum
-}
+    //the objective function
+//    fun objective(xi: DoubleArray): Double {
+//        val function = Functions()
+//        return function.schwefel(xi, dimension)
+//    }
 
-fun startBats(generation :Int) {
-    var copy = generation
-    while (copy-- >= 0) {
+    abstract fun objective(xi:DoubleArray):Double
 
-        //iterate every bat!
-        for (location in batPopulationLocation.withIndex()) {
+    fun startBats(generation: Int) {
+        var copy = generation
+        while (copy-- >= 0) {
 
-            //the ith bat
-            val i = location.index
-            batPopulationFrequency[i] = random.nextDouble()
+            //iterate every bat!
+            for (bat in batPopulationLocation.withIndex()) {
 
-            //update velocity the bat will fly to a random location
-            for (temp in location.value.withIndex()) {
-                //todo buggy overflow error ? the array sometimes  length is 4
-                if (location.index > 3)
-                    break
+                //the ith bat
+                val i = bat.index
+                val frequency = random.nextDouble() * ((2 + 2)) - 2
+//            println(batPopulationFrequency[i])
+                //update velocity the bat will fly to a random location
+                for (temp in bat.value.withIndex()) {
 
-                val j = temp.index
-                val x = temp.value
-
-                try {
+                    if (bat.value.size > 3) break
+                    val j = temp.index
+                    val x = temp.value
                     batPopulationVelocity[i][j] =
-                            (x - bestLocation[j]) * batPopulationFrequency[i] + batPopulationVelocity[i][j]
-                } catch (e: Exception) {
-                }
-            }
-
-
-            //the velocity * timeSlice is a distance and the timeSlice is 1
-            //store the location temporarily
-            for (velocity in batPopulationVelocity[i].withIndex()) {
-                val j = velocity.index
-                batPopulationLocation[i][j] = batPopulationVelocity[i][j] * 1
-                +batPopulationLocation[i][j]
-            }
-
-            //using rate to convergence
-            if (random.nextDouble() * 10 > pulseRate)
-                for (location in batPopulationLocation[i].withIndex()) {
-                    batPopulationLocation[location.index] = bestLocation + variable * random.nextGaussian()
-                    variable *= decay
+                            (x - bestLocation[j]) * frequency + batPopulationVelocity[i][j]
                 }
 
-            val objectValue = objective(batPopulationLocation[i])
-            if (objectValue <= bestValue && random.nextDouble() * 10 < loudness) {
-                   println("objective value $objectValue")
-                loudness *= decay
-                pulseRate /= pulseRate
-                bestValue = objectValue
-                bestLocation =  batPopulationLocation[i]
-            }
+
+                //the velocity * timeSlice is a distance and the timeSlice is 1
+                //store the location temporarily
+                for (velocity in batPopulationVelocity[i].withIndex()) {
+                    val j = velocity.index
+                    batPopulationLocation[i][j] = batPopulationVelocity[i][j] * 1
+                    +batPopulationLocation[i][j]
+                }
+
+                //using rate to convergence
+                if (random.nextDouble() * 10 > pulseRate)
+                    for (location in batPopulationLocation[i].withIndex()) {
+                        batPopulationLocation[location.index] = bestLocation + variable * loudness
+                        variable *= decay
+                    }
+
+                val objectValue = objective(batPopulationLocation[i])
+                if (objectValue <= bestValue && random.nextDouble() * 10 < loudness) {
+                    loudness *= decay
+                    pulseRate /= pulseRate
+                    bestValue = objectValue
+                    bestLocation = batPopulationLocation[i]
+                }
 
 
             }
         }
     }
-
-    fun main(args: Array<String>) {
-        batPopulationLocation[batPopulationLocation.size - 1] = doubleArrayOf(0.0, 0.0, 0.0)
-        startBats(generation)
-
-
-    bestLocation.forEach {
-        print("locate at ")
-        print( " $it")
-    }
-    }
-
-
+}
 
 
 
