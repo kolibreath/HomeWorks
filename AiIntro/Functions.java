@@ -168,4 +168,39 @@ public class Functions {
         value = 0.1*f2 + f1;
         return value;
     }
+
+
+    public double runAll(double[]x,int D,int i){
+        switch(i){
+            case 0:
+                return sphere(x,D);
+            case 1:
+                return schwefel(x,D);
+            case 2:
+                return schwefel2(x,D);
+            case 3:
+                return schewefel3(x,D);
+            case 4:
+                return rosenBrock(x,D);
+            case 5:
+                return step(x,D);
+            case 6:
+                return quarticWithNoise(x,D);
+            case 7:
+                return rastrign(x,D);
+            case 8:
+                return ackley(x,D);
+            case 9:
+                return griewank(x,D);
+            case 10:
+                return penalized(x,D);
+            case 11:
+                return penalized2(x,D);
+            case 12:
+                return schwefel4(x,D);
+
+
+        }
+        return 0;
+    }
 }
