@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.math.sqrt
 
 /***
  * the implementation of Bat Algorithm in Kotlin
@@ -12,7 +13,7 @@ const val population = 500
 //the iteration times of bats
 const val generation = 10000
 const val lowerBound = -5.0
-const val uppperBound = +5.0
+const val upperBound = +5.0
 
 abstract class BatAlgorithm {
     var variable = 1.0
@@ -28,7 +29,7 @@ abstract class BatAlgorithm {
      * narrow down initial locations
      */
     val randomLocation = {
-        val random = lowerBound + (uppperBound - lowerBound) * random.nextDouble()
+        val random = lowerBound + (upperBound - lowerBound) * random.nextDouble()
         random
     }
 
@@ -97,6 +98,9 @@ abstract class BatAlgorithm {
                     +batPopulationLocation[i][j]
                 }
 
+                //进行修正坐标
+                simpleBounds(batPopulationLocation[i])
+
                 //using rate to convergence
                 if (random.nextDouble() * 10 > pulseRate)
                     for (location in batPopulationLocation[i].withIndex()) {
@@ -105,7 +109,9 @@ abstract class BatAlgorithm {
                     }
 
                 val objectValue = objective(batPopulationLocation[i])
-                if (objectValue <= bestValue && random.nextDouble() * 10 < loudness) {
+                if (distance(batPopulationLocation[i],bestLocation)
+                        <= bestValue && random.nextDouble() * 10 < loudness) {
+                    println("objective value $bestValue")
                     loudness *= decay
                     pulseRate /= pulseRate
                     bestValue = objectValue
@@ -113,6 +119,25 @@ abstract class BatAlgorithm {
                 }
 
 
+            }
+        }
+    }
+
+    private fun distance(curLocation:DoubleArray, bestLocation:DoubleArray):Double{
+        var sum = 0.0
+        var counter = 0;
+        while(counter < dimension){
+            val a =  curLocation[counter] - bestLocation[counter]
+            sum += a * a
+            counter ++
+        }
+        return sqrt(sum)
+    }
+
+    private fun simpleBounds(location:DoubleArray){
+        for(i in location.withIndex()){
+            if(i.value !in lowerBound..upperBound){
+                location[i.index] = (upperBound - lowerBound)*random.nextDouble() + lowerBound
             }
         }
     }

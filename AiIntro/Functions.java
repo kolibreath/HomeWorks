@@ -82,6 +82,21 @@ public class Functions {
         return value;
     }
 
+    /**
+     * double F8(double *x)
+     * {
+     *         double value = 0;
+     *         for(int i=0; i<D; i++)
+     *                 value += -x[i]*sin(sqrt(fabs(x[i])));
+     *         //value += D*418.9828872724337;
+     *         return value;
+     * }
+     * do
+     * @param x
+     * @param D
+     * @return
+     */
+
     public double rastrign(double[]x, int D){
         double value = 0;
         for(int i=0; i<D; i++)
