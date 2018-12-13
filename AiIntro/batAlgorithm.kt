@@ -15,6 +15,9 @@ const val generation = 10000
 const val lowerBound = -5.0
 const val upperBound = +5.0
 
+const val lLowerBound = 500.0
+const val uUpperBound = -500.0
+
 abstract class BatAlgorithm {
     var variable = 1.0
     var pulseRate = 3
@@ -109,9 +112,8 @@ abstract class BatAlgorithm {
                     }
 
                 val objectValue = objective(batPopulationLocation[i])
-                if (distance(batPopulationLocation[i],bestLocation)
-                        <= bestValue && random.nextDouble() * 10 < loudness) {
-                    println("objective value $bestValue")
+                if (objectValue < bestValue
+                        && random.nextDouble() * 10 < loudness) {
                     loudness *= decay
                     pulseRate /= pulseRate
                     bestValue = objectValue
@@ -119,25 +121,16 @@ abstract class BatAlgorithm {
                 }
 
 
+
             }
         }
     }
 
-    private fun distance(curLocation:DoubleArray, bestLocation:DoubleArray):Double{
-        var sum = 0.0
-        var counter = 0;
-        while(counter < dimension){
-            val a =  curLocation[counter] - bestLocation[counter]
-            sum += a * a
-            counter ++
-        }
-        return sqrt(sum)
-    }
 
     private fun simpleBounds(location:DoubleArray){
         for(i in location.withIndex()){
-            if(i.value !in lowerBound..upperBound){
-                location[i.index] = (upperBound - lowerBound)*random.nextDouble() + lowerBound
+            if(i.value !in lLowerBound..uUpperBound){
+                location[i.index] = (- lLowerBound + uUpperBound)*random.nextDouble() + lLowerBound
             }
         }
     }
