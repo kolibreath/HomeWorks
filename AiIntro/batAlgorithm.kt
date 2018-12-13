@@ -59,11 +59,6 @@ abstract class BatAlgorithm {
         }
     }
 
-    //the objective function
-//    fun objective(xi: DoubleArray): Double {
-//        val function = Functions()
-//        return function.schwefel(xi, dimension)
-//    }
 
     abstract fun objective(xi:DoubleArray):Double
 
