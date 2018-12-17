@@ -1,84 +1,865 @@
-:the improved algorithm of Kolibreath
-------------------------------------------------------------------------
-the worst value of sphere is 6.006466819196023E-13
-the average value of sphere is 6.671587037534125E-14
-the best value of schwefel 2.22 is 6.49828813657942E-11
-the worst value of schwefel 2.22 is 1.4734581334432668E-6
-the average value of schwefel 2.22 is 1.3137998665542637E-7
-the best value of schwefel 1.2 is 7.032712157681673E-34
-the worst value of schwefel 1.2 is 2.2389380593036012E-21
-the average value of schwefel 1.2 is 9.301292927090474E-23
-the best value of schwefel 2.21 is 2.769439811730419E-10
-the worst value of schwefel 2.21 is 2.5768638357157222E-5
-the average value of schwefel 2.21 is 1.7115220516027542E-6
-the best value of rosenBrock is 5.2164706547225E-16
-the worst value of rosenBrock is 1.7587084135029126E-5
-the average value of rosenBrock is 5.959613175433561E-7
+:the values of Kolibreath 
+---------------------------------------------------------------------
+the 0 th value ofsphere is 4.1473094015392215E-15 
+the 1 th value ofsphere is 3.780048388381177E-14 
+the 2 th value ofsphere is 1.8332371995733322E-19 
+the 3 th value ofsphere is 1.3184975271946524E-12 
+the 4 th value ofsphere is 2.3728327171698363E-18 
+the 5 th value ofsphere is 1.2414700552320196E-17 
+the 6 th value ofsphere is 3.342045344346191E-14 
+the 7 th value ofsphere is 2.7202964987980727E-17 
+the 8 th value ofsphere is 7.741723042060315E-18 
+the 9 th value ofsphere is 5.965313455559848E-19 
+the 10 th value ofsphere is 3.7302015998645863E-13 
+the 11 th value ofsphere is 1.4146626149158968E-16 
+the 12 th value ofsphere is 5.349103929577444E-13 
+the 13 th value ofsphere is 1.2954542299138211E-14 
+the 14 th value ofsphere is 4.292300445205337E-16 
+the 15 th value ofsphere is 1.1368661045486702E-14 
+the 16 th value ofsphere is 1.7487648745598186E-14 
+the 17 th value ofsphere is 3.385095343416981E-17 
+the 18 th value ofsphere is 2.345481416099972E-14 
+the 19 th value ofsphere is 3.117364618104383E-15 
+the 20 th value ofsphere is 9.860248868981559E-18 
+the 21 th value ofsphere is 4.533118522295978E-11 
+the 22 th value ofsphere is 2.1370152714696662E-15 
+the 23 th value ofsphere is 1.0196388205703652E-18 
+the 24 th value ofsphere is 2.8850377864097943E-18 
+the 25 th value ofsphere is 4.968534594531382E-17 
+the 26 th value ofsphere is 2.698358163329263E-16 
+the 27 th value ofsphere is 1.3454902941299568E-18 
+the 28 th value ofsphere is 2.091558103201911E-19 
+the 29 th value ofsphere is 1.2000525043028646E-13 
+the best value of sphere is 1.8332371995733322E-19
+the worst value of sphere is 4.533118522295978E-11
+the average value of sphere is 1.59414989154894E-12
+the 0 th value ofschwefel 2.22 is 1.389577715267708E-7 
+the 1 th value ofschwefel 2.22 is 4.196602900877522E-10 
+the 2 th value ofschwefel 2.22 is 3.556764415058449E-7 
+the 3 th value ofschwefel 2.22 is 7.084458000886976E-10 
+the 4 th value ofschwefel 2.22 is 2.379468503613079E-10 
+the 5 th value ofschwefel 2.22 is 1.5229581015322734E-8 
+the 6 th value ofschwefel 2.22 is 1.4558500529180577E-7 
+the 7 th value ofschwefel 2.22 is 1.4824178584873019E-8 
+the 8 th value ofschwefel 2.22 is 1.1291978101302258E-7 
+the 9 th value ofschwefel 2.22 is 3.680349677161631E-7 
+the 10 th value ofschwefel 2.22 is 4.5844631096094415E-8 
+the 11 th value ofschwefel 2.22 is 2.781855466071665E-7 
+the 12 th value ofschwefel 2.22 is 3.1381809969288466E-8 
+the 13 th value ofschwefel 2.22 is 3.6697001353222414E-10 
+the 14 th value ofschwefel 2.22 is 1.3319168269232948E-8 
+the 15 th value ofschwefel 2.22 is 3.2174747727365786E-7 
+the 16 th value ofschwefel 2.22 is 4.936027360463915E-6 
+the 17 th value ofschwefel 2.22 is 9.250995093292854E-9 
+the 18 th value ofschwefel 2.22 is 9.881256620675341E-9 
+the 19 th value ofschwefel 2.22 is 1.919349039022909E-9 
+the 20 th value ofschwefel 2.22 is 5.1248097480577726E-8 
+the 21 th value ofschwefel 2.22 is 4.005678952746338E-6 
+the 22 th value ofschwefel 2.22 is 1.6483418401532928E-8 
+the 23 th value ofschwefel 2.22 is 1.1319883532980977E-8 
+the 24 th value ofschwefel 2.22 is 6.196270773716447E-8 
+the 25 th value ofschwefel 2.22 is 4.26820641443844E-7 
+the 26 th value ofschwefel 2.22 is 1.7471243044765383E-9 
+the 27 th value ofschwefel 2.22 is 6.630289340618016E-9 
+the 28 th value ofschwefel 2.22 is 4.8848468624567286E-8 
+the 29 th value ofschwefel 2.22 is 5.099798651059804E-8 
+the best value of schwefel 2.22 is 2.379468503613079E-10
+the worst value of schwefel 2.22 is 4.936027360463915E-6
+the average value of schwefel 2.22 is 3.827418638054305E-7
+the 0 th value ofschwefel 1.2 is 2.9121677013741444E-26 
+the 1 th value ofschwefel 1.2 is 1.95111693254385E-30 
+the 2 th value ofschwefel 1.2 is 2.691835044673818E-27 
+the 3 th value ofschwefel 1.2 is 5.4064264642696506E-27 
+the 4 th value ofschwefel 1.2 is 1.865075340861099E-27 
+the 5 th value ofschwefel 1.2 is 5.84587174679073E-24 
+the 6 th value ofschwefel 1.2 is 3.2850171134868853E-34 
+the 7 th value ofschwefel 1.2 is 8.193686977417653E-31 
+the 8 th value ofschwefel 1.2 is 2.728784589340619E-32 
+the 9 th value ofschwefel 1.2 is 1.0084770558909573E-24 
+the 10 th value ofschwefel 1.2 is 2.972960981099921E-28 
+the 11 th value ofschwefel 1.2 is 1.1205711959367645E-30 
+the 12 th value ofschwefel 1.2 is 1.7578627984149928E-29 
+the 13 th value ofschwefel 1.2 is 4.071086632273624E-25 
+the 14 th value ofschwefel 1.2 is 4.197209535658181E-24 
+the 15 th value ofschwefel 1.2 is 9.50376672192473E-31 
+the 16 th value ofschwefel 1.2 is 6.418479690481469E-32 
+the 17 th value ofschwefel 1.2 is 6.435602303174337E-29 
+the 18 th value ofschwefel 1.2 is 7.703671845728184E-29 
+the 19 th value ofschwefel 1.2 is 5.884403623969461E-26 
+the 20 th value ofschwefel 1.2 is 1.3697427856873051E-36 
+the 21 th value ofschwefel 1.2 is 6.663068485230812E-35 
+the 22 th value ofschwefel 1.2 is 5.016234504453417E-28 
+the 23 th value ofschwefel 1.2 is 8.489446295297537E-26 
+the 24 th value ofschwefel 1.2 is 6.159757209819033E-31 
+the 25 th value ofschwefel 1.2 is 1.395559197182661E-26 
+the 26 th value ofschwefel 1.2 is 2.5262895658159536E-30 
+the 27 th value ofschwefel 1.2 is 1.7600005997550033E-29 
+the 28 th value ofschwefel 1.2 is 1.2812453173829567E-21 
+the 29 th value ofschwefel 1.2 is 1.4089845816477246E-22 
+the best value of schwefel 1.2 is 1.3697427856873051E-36
+the worst value of schwefel 1.2 is 1.2812453173829567E-21
+the average value of schwefel 1.2 is 4.779334017402721E-23
+the 0 th value ofschwefel 2.21 is 1.847702358069065E-6 
+the 1 th value ofschwefel 2.21 is 8.984677181722436E-7 
+the 2 th value ofschwefel 2.21 is 4.656723390393899E-9 
+the 3 th value ofschwefel 2.21 is 4.5690835611396373E-7 
+the 4 th value ofschwefel 2.21 is 3.402878338896991E-11 
+the 5 th value ofschwefel 2.21 is 4.425450554791563E-7 
+the 6 th value ofschwefel 2.21 is 1.3732722636867675E-7 
+the 7 th value ofschwefel 2.21 is 1.8817835389130517E-9 
+the 8 th value ofschwefel 2.21 is 3.208382202407073E-8 
+the 9 th value ofschwefel 2.21 is 3.592125957973887E-7 
+the 10 th value ofschwefel 2.21 is 9.981491391694615E-8 
+the 11 th value ofschwefel 2.21 is 9.362831581704917E-8 
+the 12 th value ofschwefel 2.21 is 4.400888968541377E-9 
+the 13 th value ofschwefel 2.21 is 5.146603824781263E-9 
+the 14 th value ofschwefel 2.21 is 1.6964969852973553E-10 
+the 15 th value ofschwefel 2.21 is 2.2797167541969842E-8 
+the 16 th value ofschwefel 2.21 is 3.698099598608657E-8 
+the 17 th value ofschwefel 2.21 is 9.732483749666534E-8 
+the 18 th value ofschwefel 2.21 is 9.162506321515648E-12 
+the 19 th value ofschwefel 2.21 is 5.206689603999107E-7 
+the 20 th value ofschwefel 2.21 is 7.259095535596225E-8 
+the 21 th value ofschwefel 2.21 is 1.1693401064180194E-8 
+the 22 th value ofschwefel 2.21 is 4.4554296147875275E-8 
+the 23 th value ofschwefel 2.21 is 3.3503109914051555E-8 
+the 24 th value ofschwefel 2.21 is 1.6199083668149117E-10 
+the 25 th value ofschwefel 2.21 is 1.5352315122680449E-9 
+the 26 th value ofschwefel 2.21 is 6.090102589688021E-7 
+the 27 th value ofschwefel 2.21 is 2.4546609473340777E-8 
+the 28 th value ofschwefel 2.21 is 3.5417031188690094E-8 
+the 29 th value ofschwefel 2.21 is 3.1882948860448104E-7 
+the best value of schwefel 2.21 is 9.162506321515648E-12
+the worst value of schwefel 2.21 is 1.847702358069065E-6
+the average value of schwefel 2.21 is 2.071201178986799E-7
+the 0 th value ofrosenBrock is 1.6330562685209853E-13 
+the 1 th value ofrosenBrock is 6.572093727848604E-10 
+the 2 th value ofrosenBrock is 8.91346093899189E-12 
+the 3 th value ofrosenBrock is 1.138938223295826E-11 
+the 4 th value ofrosenBrock is 1.5803629289317577E-11 
+the 5 th value ofrosenBrock is 2.6285401091486572E-8 
+the 6 th value ofrosenBrock is 2.5464806734576883E-10 
+the 7 th value ofrosenBrock is 4.235620353249226E-8 
+the 8 th value ofrosenBrock is 2.0542822530051614E-12 
+the 9 th value ofrosenBrock is 3.544006880549077E-14 
+the 10 th value ofrosenBrock is 6.804908894386137E-11 
+the 11 th value ofrosenBrock is 3.933585462977901E-9 
+the 12 th value ofrosenBrock is 1.3965822410592203E-9 
+the 13 th value ofrosenBrock is 1.1735994115611877E-10 
+the 14 th value ofrosenBrock is 1.8621483492685695E-6 
+the 15 th value ofrosenBrock is 2.9089285015084186E-9 
+the 16 th value ofrosenBrock is 2.7666577994212484E-9 
+the 17 th value ofrosenBrock is 3.5058140271132284E-11 
+the 18 th value ofrosenBrock is 1.2524900238058311E-6 
+the 19 th value ofrosenBrock is 2.1539039416830615E-8 
+the 20 th value ofrosenBrock is 2.0660231443705263E-10 
+the 21 th value ofrosenBrock is 1.6647286557623162E-12 
+the 22 th value ofrosenBrock is 2.8154601783451407E-11 
+the 23 th value ofrosenBrock is 1.7698424493357378E-8 
+the 24 th value ofrosenBrock is 4.683190726026425E-12 
+the 25 th value ofrosenBrock is 1.2301007320454908E-10 
+the 26 th value ofrosenBrock is 9.981529705478326E-14 
+the 27 th value ofrosenBrock is 8.548718854928514E-9 
+the 28 th value ofrosenBrock is 2.4984759513709935E-10 
+the 29 th value ofrosenBrock is 2.0869979590382725E-13 
+the best value of rosenBrock is 3.544006880549077E-14
+the worst value of rosenBrock is 1.8621483492685695E-6
+the average value of rosenBrock is 1.0812856231994707E-7
+the 0 th value ofstep is 0.0 
+the 1 th value ofstep is 0.0 
+the 2 th value ofstep is 0.0 
+the 3 th value ofstep is 0.0 
+the 4 th value ofstep is 0.0 
+the 5 th value ofstep is 0.0 
+the 6 th value ofstep is 0.0 
+the 7 th value ofstep is 0.0 
+the 8 th value ofstep is 0.0 
+the 9 th value ofstep is 0.0 
+the 10 th value ofstep is 0.0 
+the 11 th value ofstep is 0.0 
+the 12 th value ofstep is 0.0 
+the 13 th value ofstep is 0.0 
+the 14 th value ofstep is 0.0 
+the 15 th value ofstep is 0.0 
+the 16 th value ofstep is 0.0 
+the 17 th value ofstep is 0.0 
+the 18 th value ofstep is 0.0 
+the 19 th value ofstep is 0.0 
+the 20 th value ofstep is 0.0 
+the 21 th value ofstep is 0.0 
+the 22 th value ofstep is 0.0 
+the 23 th value ofstep is 0.0 
+the 24 th value ofstep is 0.0 
+the 25 th value ofstep is 0.0 
+the 26 th value ofstep is 0.0 
+the 27 th value ofstep is 0.0 
+the 28 th value ofstep is 0.0 
+the 29 th value ofstep is 0.0 
 the best value of step is 0.0
 the worst value of step is 0.0
 the average value of step is 0.0
-the best value of quarticWithNoise is 9.911455802334441E-6
-the worst value of quarticWithNoise is 0.0021444285276927297
-the average value of quarticWithNoise is 4.998358698476425E-4
+the 0 th value ofquarticWithNoise is 7.765152967278913E-5 
+the 1 th value ofquarticWithNoise is 0.001328541337974253 
+the 2 th value ofquarticWithNoise is 2.3906954404451325E-4 
+the 3 th value ofquarticWithNoise is 3.289860185410801E-7 
+the 4 th value ofquarticWithNoise is 4.0964642677523527E-4 
+the 5 th value ofquarticWithNoise is 2.874079731351257E-7 
+the 6 th value ofquarticWithNoise is 8.561522633516347E-5 
+the 7 th value ofquarticWithNoise is 1.4601455203561058E-4 
+the 8 th value ofquarticWithNoise is 2.5193744833222918E-5 
+the 9 th value ofquarticWithNoise is 7.0597372794468765E-6 
+the 10 th value ofquarticWithNoise is 0.0013323316732569885 
+the 11 th value ofquarticWithNoise is 1.459985263779215E-4 
+the 12 th value ofquarticWithNoise is 1.0989483127618621E-5 
+the 13 th value ofquarticWithNoise is 4.3453740456731376E-5 
+the 14 th value ofquarticWithNoise is 1.3335338062641947E-4 
+the 15 th value ofquarticWithNoise is 0.0010773564838366914 
+the 16 th value ofquarticWithNoise is 1.0356777482319318E-5 
+the 17 th value ofquarticWithNoise is 4.721100172990681E-4 
+the 18 th value ofquarticWithNoise is 1.626394608552497E-5 
+the 19 th value ofquarticWithNoise is 0.0010145615078168376 
+the 20 th value ofquarticWithNoise is 7.970083665428556E-4 
+the 21 th value ofquarticWithNoise is 1.0588275682343847E-4 
+the 22 th value ofquarticWithNoise is 0.0014203441657365673 
+the 23 th value ofquarticWithNoise is 3.123292969026456E-4 
+the 24 th value ofquarticWithNoise is 1.9107151717339437E-4 
+the 25 th value ofquarticWithNoise is 0.0013429475788057207 
+the 26 th value ofquarticWithNoise is 1.4841821292200407E-4 
+the 27 th value ofquarticWithNoise is 4.1363300065311656E-4 
+the 28 th value ofquarticWithNoise is 1.371745466348802E-4 
+the 29 th value ofquarticWithNoise is 4.537603491089814E-6 
+the best value of quarticWithNoise is 2.874079731351257E-7
+the worst value of quarticWithNoise is 0.0014203441657365673
+the average value of quarticWithNoise is 3.8165103583312477E-4
+the 0 th value ofrastrign is 4.6936797559737897E-7 
+the 1 th value ofrastrign is 0.1627119797931531 
+the 2 th value ofrastrign is 0.9949590570932916 
+the 3 th value ofrastrign is 2.7206858987938176E-10 
+the 4 th value ofrastrign is 3.375077994860476E-14 
+the 5 th value ofrastrign is 0.9949590570932898 
+the 6 th value ofrastrign is 7.30082660993503E-12 
+the 7 th value ofrastrign is 1.9899181141870095 
+the 8 th value ofrastrign is 2.5224267119483557E-13 
+the 9 th value ofrastrign is 2.4868995751603507E-14 
+the 10 th value ofrastrign is 0.0 
+the 11 th value ofrastrign is 1.7763568394002505E-15 
+the 12 th value ofrastrign is 0.9949590570932898 
+the 13 th value ofrastrign is 1.9899181144310916 
+the 14 th value ofrastrign is 1.9899181141942233 
+the 15 th value ofrastrign is 1.6160406346443779E-9 
+the 16 th value ofrastrign is 0.9949590570932916 
+the 17 th value ofrastrign is 0.9949590570932898 
+the 18 th value ofrastrign is 0.9949590570932934 
+the 19 th value ofrastrign is 1.9899181142022773 
+the 20 th value ofrastrign is 0.9949590570932987 
+the 21 th value ofrastrign is 4.567013434098044E-12 
+the 22 th value ofrastrign is 0.9949590570932934 
+the 23 th value ofrastrign is 6.361133841892297E-12 
+the 24 th value ofrastrign is 0.0 
+the 25 th value ofrastrign is 3.552713678800501E-15 
+the 26 th value ofrastrign is 1.2963278413808084 
+the 27 th value ofrastrign is 4.702121739086351E-6 
+the 28 th value ofrastrign is 0.9949590571308669 
+the 29 th value ofrastrign is 0.9949590570935527 
 the best value of rastrign is 0.0
-the worst value of rastrign is 1.989918114598975
-the average value of rastrign is 0.5306448305228627
-the best value of ackley is 1.1291989565620497E-10
-the worst value of ackley is 1.0645512276585833E-5
-the average value of ackley is 5.22142059929583E-7
+the worst value of rastrign is 1.9899181144310916
+the average value of rastrign is 0.645610267418523
+the 0 th value ofackley is 6.617243291096031E-7 
+the 1 th value ofackley is 1.895030310450352E-8 
+the 2 th value ofackley is 2.0723053539839498E-7 
+the 3 th value ofackley is 1.0495757596373778E-8 
+the 4 th value ofackley is 9.535427030193944E-7 
+the 5 th value ofackley is 1.9610202350861528E-9 
+the 6 th value ofackley is 3.391483049952626E-8 
+the 7 th value ofackley is 1.9002088791353344E-10 
+the 8 th value ofackley is 7.170994860139501E-7 
+the 9 th value ofackley is 9.293918634689646E-7 
+the 10 th value ofackley is 8.632515546835862E-8 
+the 11 th value ofackley is 3.0763506631004134E-7 
+the 12 th value ofackley is 3.358400535447004E-8 
+the 13 th value ofackley is 3.3894740347761854E-9 
+the 14 th value ofackley is 4.881983262094991E-9 
+the 15 th value ofackley is 2.6051013479744256E-7 
+the 16 th value ofackley is 2.554954403599652E-7 
+the 17 th value ofackley is 7.003221448531605E-6 
+the 18 th value ofackley is 1.1440950409280504E-9 
+the 19 th value ofackley is 1.4363199518641068E-9 
+the 20 th value ofackley is 1.9248392790771618E-7 
+the 21 th value ofackley is 3.1798532695859194E-9 
+the 22 th value ofackley is 2.0510431131270934E-8 
+the 23 th value ofackley is 1.403603011596033E-9 
+the 24 th value ofackley is 1.1015120238155873E-7 
+the 25 th value ofackley is 3.685495331140487E-8 
+the 26 th value ofackley is 4.1093589420171384E-8 
+the 27 th value ofackley is 2.5911828238633916E-9 
+the 28 th value ofackley is 3.38306673741684E-6 
+the 29 th value ofackley is 4.2829779722808325E-9 
+the best value of ackley is 1.9002088791353344E-10
+the worst value of ackley is 7.003221448531605E-6
+the average value of ackley is 5.095914143697182E-7
+the 0 th value ofgriewank is 0.0 
+the 1 th value ofgriewank is 1.1102230246251565E-16 
+the 2 th value ofgriewank is 3.197442310920451E-14 
+the 3 th value ofgriewank is 0.0 
+the 4 th value ofgriewank is 2.0905499553691698E-13 
+the 5 th value ofgriewank is 8.881784197001252E-16 
+the 6 th value ofgriewank is 1.1102230246251565E-16 
+the 7 th value ofgriewank is 0.0 
+the 8 th value ofgriewank is 8.881784197001252E-16 
+the 9 th value ofgriewank is 0.0 
+the 10 th value ofgriewank is 1.1102230246251565E-16 
+the 11 th value ofgriewank is 0.0 
+the 12 th value ofgriewank is 3.6637359812630166E-15 
+the 13 th value ofgriewank is 0.0 
+the 14 th value ofgriewank is 5.958566973163215E-13 
+the 15 th value ofgriewank is 6.283862319378386E-14 
+the 16 th value ofgriewank is 0.0 
+the 17 th value ofgriewank is 3.2862601528904634E-14 
+the 18 th value ofgriewank is 8.881784197001252E-16 
+the 19 th value ofgriewank is 1.5543122344752192E-15 
+the 20 th value ofgriewank is 7.049916206369744E-14 
+the 21 th value ofgriewank is 0.0 
+the 22 th value ofgriewank is 8.881784197001252E-16 
+the 23 th value ofgriewank is 1.1102230246251565E-16 
+the 24 th value ofgriewank is 0.0 
+the 25 th value ofgriewank is 0.0 
+the 26 th value ofgriewank is 0.0 
+the 27 th value ofgriewank is 0.0 
+the 28 th value ofgriewank is 2.3647750424515834E-14 
+the 29 th value ofgriewank is 8.881784197001252E-16 
 the best value of griewank is 0.0
-the worst value of griewank is 2.1373680603176126E-11
-the average value of griewank is 9.97365153428594E-13
-the best value of penalized is 1.0288304286309753E-16
-the worst value of penalized is 8.807909242618312E-5
-the average value of penalized is 3.4435836252030043E-6
-the best value of penalized2 is 2.4929323574476024E-17
-the worst value of penalized2 is 7.737593719223977E-8
-the average value of penalized2 is 2.8294498795098813E-9
-the best value of schwefel 2.6 is -1256.9486618078993
-the worst value of schwefel 2.6 is -1256.9486618078993
-the average value of schwefel 2.6 is -1256.9486618078995
+the worst value of griewank is 5.958566973163215E-13
+the average value of griewank is 3.4561242756581124E-14
+the 0 th value ofpenalized is 1.8679578862508205E-5 
+the 1 th value ofpenalized is 8.536705164427742E-10 
+the 2 th value ofpenalized is 8.741067094693622E-9 
+the 3 th value ofpenalized is 1.1269166324661354E-10 
+the 4 th value ofpenalized is 3.254841377983191E-7 
+the 5 th value ofpenalized is 2.748118813654806E-5 
+the 6 th value ofpenalized is 7.927559191979339E-11 
+the 7 th value ofpenalized is 5.687766697213489E-10 
+the 8 th value ofpenalized is 2.6608794591306178E-11 
+the 9 th value ofpenalized is 2.519101713675448E-11 
+the 10 th value ofpenalized is 5.676009753871336E-6 
+the 11 th value ofpenalized is 2.0350196170554635E-10 
+the 12 th value ofpenalized is 6.328097702167227E-17 
+the 13 th value ofpenalized is 1.2045825349843651E-4 
+the 14 th value ofpenalized is 2.688299958486065E-10 
+the 15 th value ofpenalized is 2.2304093804911485E-9 
+the 16 th value ofpenalized is 2.1198551647315597E-9 
+the 17 th value ofpenalized is 2.328306484219681E-10 
+the 18 th value ofpenalized is 5.8528650066327875E-5 
+the 19 th value ofpenalized is 5.415009838356511E-10 
+the 20 th value ofpenalized is 5.130964482579658E-4 
+the 21 th value ofpenalized is 1.4080411334128615E-15 
+the 22 th value ofpenalized is 2.278458549450902E-10 
+the 23 th value ofpenalized is 9.94411867006935E-11 
+the 24 th value ofpenalized is 1.3847120439178707E-9 
+the 25 th value ofpenalized is 1.0366902085115581 
+the 26 th value ofpenalized is 2.3982540254771416E-7 
+the 27 th value ofpenalized is 1.3176214270748143E-15 
+the 28 th value ofpenalized is 4.583833672773178E-14 
+the 29 th value ofpenalized is 2.0738537608798815E-4 
+the best value of penalized is 6.328097702167227E-17
+the worst value of penalized is 1.0366902085115581
+the average value of penalized is 0.03458806990140064
+the 0 th value ofpenalized2 is 1.254408194196945E-13 
+the 1 th value ofpenalized2 is 1.110764526610365E-9 
+the 2 th value ofpenalized2 is 1.841882809172177E-12 
+the 3 th value ofpenalized2 is 2.465538501802142E-16 
+the 4 th value ofpenalized2 is 1.1543539386654951E-12 
+the 5 th value ofpenalized2 is 1.0797221725155376E-11 
+the 6 th value ofpenalized2 is 2.9515554855809357E-10 
+the 7 th value ofpenalized2 is 1.326872071537681E-12 
+the 8 th value ofpenalized2 is 3.4148615362164594E-17 
+the 9 th value ofpenalized2 is 4.330427602670206E-14 
+the 10 th value ofpenalized2 is 3.0537147803476786E-15 
+the 11 th value ofpenalized2 is 2.8159374470235484E-13 
+the 12 th value ofpenalized2 is 1.2810853427517783E-9 
+the 13 th value ofpenalized2 is 2.4755541976481748E-12 
+the 14 th value ofpenalized2 is 1.1649705403985956E-10 
+the 15 th value ofpenalized2 is 5.16418333747872E-14 
+the 16 th value ofpenalized2 is 6.863328656816703E-12 
+the 17 th value ofpenalized2 is 3.890602937516872E-15 
+the 18 th value ofpenalized2 is 8.09281354239884E-11 
+the 19 th value ofpenalized2 is 9.850478964151175E-16 
+the 20 th value ofpenalized2 is 9.304660182857656E-12 
+the 21 th value ofpenalized2 is 6.253546734388318E-16 
+the 22 th value ofpenalized2 is 3.415511945674815E-14 
+the 23 th value ofpenalized2 is 1.2558778726859996E-9 
+the 24 th value ofpenalized2 is 4.3943577021368304E-15 
+the 25 th value ofpenalized2 is 2.3457401649762317E-15 
+the 26 th value ofpenalized2 is 1.061571918973816E-11 
+the 27 th value ofpenalized2 is 6.3498124457903835E-12 
+the 28 th value ofpenalized2 is 1.0420132522234555E-14 
+the 29 th value ofpenalized2 is 7.64813923380268E-11 
+the best value of penalized2 is 3.4148615362164594E-17
+the worst value of penalized2 is 1.2810853427517783E-9
+the average value of penalized2 is 1.4226938030238722E-10
+the 0 th value of schewel 2.6 is -1256.9174171834352 
+the 1 th value of schewel 2.6 is -1256.9174171834352 
+the 2 th value of schewel 2.6 is -1256.9412029937018 
+the 3 th value of schewel 2.6 is -1256.9412029937018 
+the 4 th value of schewel 2.6 is -1256.9412029937018 
+the 5 th value of schewel 2.6 is -1256.9412029937018 
+the 6 th value of schewel 2.6 is -1256.9412029937018 
+the 7 th value of schewel 2.6 is -1256.9412029937018 
+the 8 th value of schewel 2.6 is -1256.9412029937018 
+the 9 th value of schewel 2.6 is -1256.9412029937018 
+the 10 th value of schewel 2.6 is -1256.9412029937018 
+the 11 th value of schewel 2.6 is -1256.9412029937018 
+the 12 th value of schewel 2.6 is -1256.9412029937018 
+the 13 th value of schewel 2.6 is -1256.9412029937018 
+the 14 th value of schewel 2.6 is -1256.9412029937018 
+the 15 th value of schewel 2.6 is -1256.9412029937018 
+the 16 th value of schewel 2.6 is -1256.9412029937018 
+the 17 th value of schewel 2.6 is -1256.9412029937018 
+the 18 th value of schewel 2.6 is -1256.9412029937018 
+the 19 th value of schewel 2.6 is -1256.9412029937018 
+the 20 th value of schewel 2.6 is -1256.9412029937018 
+the 21 th value of schewel 2.6 is -1256.9412029937018 
+the 22 th value of schewel 2.6 is -1256.9412029937018 
+the 23 th value of schewel 2.6 is -1256.9412029937018 
+the 24 th value of schewel 2.6 is -1256.9412029937018 
+the 25 th value of schewel 2.6 is -1256.9412029937018 
+the 26 th value of schewel 2.6 is -1256.9412029937018 
+the 27 th value of schewel 2.6 is -1256.9412029937018 
+the 28 th value of schewel 2.6 is -1256.9412029937018 
+the 29 th value of schewel 2.6 is -1256.9412029937018 
+the best value of schwefel 2.6 is -1256.9412029937018
+the worst value of schwefel 2.6 is -1256.9174171834352
+the average value of schwefel 2.6 is -1256.939617273017
 
-:Native Bat Algorithm 
---------------------------------------------------------------------------
-the best value of sphere is 4.045201435267368E-12
-the worst value of sphere is 2.072444997684398E-10
-the average value of sphere is 9.203653075735043E-11
-the best value of schwefel 2.22 is 4.5759939347117695E-6
-the worst value of schwefel 2.22 is 2.496548945925722E-5
-the average value of schwefel 2.22 is 1.623684143853519E-5
-the best value of schwefel 1.2 is 2.468745082466339E-15
-the worst value of schwefel 1.2 is 2.397585838479127E-12
-the average value of schwefel 1.2 is 5.453421145395754E-13
-the best value of schwefel 2.21 is 2.739463859303946E-6
-the worst value of schwefel 2.21 is 1.1261450956488788E-5
-the average value of schwefel 2.21 is 7.193445668201976E-6
-the best value of rosenBrock is 5.826013632116897E-10
-the worst value of rosenBrock is 1.1457502499720761E-8
-the average value of rosenBrock is 4.744552816527875E-9
+:the values of Native BA
+------------------------------------------------------------------------
+the 0 th value ofsphere is 6.627368484545789E-11 
+the 1 th value ofsphere is 8.571660696624753E-11 
+the 2 th value ofsphere is 1.0117883391251533E-10 
+the 3 th value ofsphere is 6.60421102166191E-11 
+the 4 th value ofsphere is 1.7826529650286997E-10 
+the 5 th value ofsphere is 4.190303445446916E-11 
+the 6 th value ofsphere is 1.261105032704077E-10 
+the 7 th value ofsphere is 2.4254572693051386E-10 
+the 8 th value ofsphere is 8.289955212147961E-11 
+the 9 th value ofsphere is 9.158777607389756E-11 
+the 10 th value ofsphere is 4.139934870662584E-11 
+the 11 th value ofsphere is 2.958421444213264E-11 
+the 12 th value ofsphere is 4.901589594006984E-11 
+the 13 th value ofsphere is 3.0407150073229826E-11 
+the 14 th value ofsphere is 2.998043624874847E-11 
+the 15 th value ofsphere is 1.1458262856837124E-10 
+the 16 th value ofsphere is 7.793473251598575E-11 
+the 17 th value ofsphere is 1.0988076925994573E-10 
+the 18 th value ofsphere is 1.682678631748577E-11 
+the 19 th value ofsphere is 1.0706012087629641E-10 
+the 20 th value ofsphere is 9.308177817644539E-11 
+the 21 th value ofsphere is 1.5075587397873429E-10 
+the 22 th value ofsphere is 3.272915936675223E-11 
+the 23 th value ofsphere is 2.6287856251749528E-11 
+the 24 th value ofsphere is 1.9153034848936533E-10 
+the 25 th value ofsphere is 2.79609491894444E-10 
+the 26 th value ofsphere is 1.3453436852741133E-10 
+the 27 th value ofsphere is 2.6827920555059782E-11 
+the 28 th value ofsphere is 1.1922753208603147E-10 
+the 29 th value ofsphere is 1.0351707875726998E-10 
+the best value of sphere is 1.682678631748577E-11
+the worst value of sphere is 2.79609491894444E-10
+the average value of sphere is 9.490988721088776E-11
+the 0 th value ofschwefel 2.22 is 1.4865118005422043E-5 
+the 1 th value ofschwefel 2.22 is 1.4684217848813032E-5 
+the 2 th value ofschwefel 2.22 is 2.0758464630713004E-5 
+the 3 th value ofschwefel 2.22 is 1.2074167965096694E-5 
+the 4 th value ofschwefel 2.22 is 1.5012752603612909E-5 
+the 5 th value ofschwefel 2.22 is 1.7613387085520276E-5 
+the 6 th value ofschwefel 2.22 is 1.220343231533942E-5 
+the 7 th value ofschwefel 2.22 is 1.3553471385234368E-5 
+the 8 th value ofschwefel 2.22 is 9.305966175403975E-6 
+the 9 th value ofschwefel 2.22 is 1.5601646497179665E-5 
+the 10 th value ofschwefel 2.22 is 1.3591273860336346E-5 
+the 11 th value ofschwefel 2.22 is 1.898071226599714E-5 
+the 12 th value ofschwefel 2.22 is 2.221350713426882E-5 
+the 13 th value ofschwefel 2.22 is 1.54228978540253E-5 
+the 14 th value ofschwefel 2.22 is 2.6094830206906613E-5 
+the 15 th value ofschwefel 2.22 is 1.1606066620203801E-5 
+the 16 th value ofschwefel 2.22 is 1.5724870260514328E-5 
+the 17 th value ofschwefel 2.22 is 1.365616800799949E-5 
+the 18 th value ofschwefel 2.22 is 1.3510209870137578E-5 
+the 19 th value ofschwefel 2.22 is 1.558795636017056E-5 
+the 20 th value ofschwefel 2.22 is 7.090980707511466E-6 
+the 21 th value ofschwefel 2.22 is 1.2642662987184719E-5 
+the 22 th value ofschwefel 2.22 is 8.721084918731523E-6 
+the 23 th value ofschwefel 2.22 is 1.4559615828191663E-5 
+the 24 th value ofschwefel 2.22 is 1.434624953796046E-5 
+the 25 th value ofschwefel 2.22 is 1.6265431789637653E-5 
+the 26 th value ofschwefel 2.22 is 1.3537478203706765E-5 
+the 27 th value ofschwefel 2.22 is 2.14056203164183E-5 
+the 28 th value ofschwefel 2.22 is 1.7325146711104702E-5 
+the 29 th value ofschwefel 2.22 is 1.5075436045818875E-5 
+the best value of schwefel 2.22 is 7.090980707511466E-6
+the worst value of schwefel 2.22 is 2.6094830206906613E-5
+the average value of schwefel 2.22 is 1.5101027466638716E-5
+the 0 th value ofschwefel 1.2 is 4.989086734784842E-13 
+the 1 th value ofschwefel 1.2 is 1.1326806302371342E-13 
+the 2 th value ofschwefel 1.2 is 5.5258167951137045E-14 
+the 3 th value ofschwefel 1.2 is 7.859456214622305E-14 
+the 4 th value ofschwefel 1.2 is 2.6120415020466303E-14 
+the 5 th value ofschwefel 1.2 is 8.175919974238014E-14 
+the 6 th value ofschwefel 1.2 is 5.939244902798543E-13 
+the 7 th value ofschwefel 1.2 is 3.0271800481038086E-13 
+the 8 th value ofschwefel 1.2 is 1.9834541014506372E-12 
+the 9 th value ofschwefel 1.2 is 7.13296069045798E-14 
+the 10 th value ofschwefel 1.2 is 1.063402261753396E-12 
+the 11 th value ofschwefel 1.2 is 1.1275507449467632E-13 
+the 12 th value ofschwefel 1.2 is 5.924083260762307E-13 
+the 13 th value ofschwefel 1.2 is 2.2852911426160085E-13 
+the 14 th value ofschwefel 1.2 is 5.482071110072248E-13 
+the 15 th value ofschwefel 1.2 is 6.570444365125803E-13 
+the 16 th value ofschwefel 1.2 is 5.199801460533858E-13 
+the 17 th value ofschwefel 1.2 is 2.0170500129782684E-13 
+the 18 th value ofschwefel 1.2 is 4.509367664262731E-13 
+the 19 th value ofschwefel 1.2 is 4.663021424847046E-13 
+the 20 th value ofschwefel 1.2 is 7.533906239991726E-13 
+the 21 th value ofschwefel 1.2 is 2.7740481806648725E-13 
+the 22 th value ofschwefel 1.2 is 6.342509183362107E-14 
+the 23 th value ofschwefel 1.2 is 9.048263051729447E-13 
+the 24 th value ofschwefel 1.2 is 1.9546898018462137E-12 
+the 25 th value ofschwefel 1.2 is 8.094952280174099E-13 
+the 26 th value ofschwefel 1.2 is 7.53842782695033E-14 
+the 27 th value ofschwefel 1.2 is 9.270965589274865E-13 
+the 28 th value ofschwefel 1.2 is 3.8241750343922157E-13 
+the 29 th value ofschwefel 1.2 is 4.367045887133753E-13 
+the best value of schwefel 1.2 is 2.6120415020466303E-14
+the worst value of schwefel 1.2 is 1.9834541014506372E-12
+the average value of schwefel 1.2 is 5.07714682115373E-13
+the 0 th value ofschwefel 2.21 is 1.0696598629935367E-5 
+the 1 th value ofschwefel 2.21 is 1.009961704455251E-5 
+the 2 th value ofschwefel 2.21 is 6.247350788109485E-6 
+the 3 th value ofschwefel 2.21 is 5.303377218208963E-6 
+the 4 th value ofschwefel 2.21 is 1.3636486846699246E-5 
+the 5 th value ofschwefel 2.21 is 7.823058026545858E-6 
+the 6 th value ofschwefel 2.21 is 6.5034996328566536E-6 
+the 7 th value ofschwefel 2.21 is 1.065558147885335E-5 
+the 8 th value ofschwefel 2.21 is 1.0132781610413333E-5 
+the 9 th value ofschwefel 2.21 is 8.983525823900667E-6 
+the 10 th value ofschwefel 2.21 is 1.424816679274307E-6 
+the 11 th value ofschwefel 2.21 is 1.0686731816340541E-5 
+the 12 th value ofschwefel 2.21 is 1.17643723713403E-5 
+the 13 th value ofschwefel 2.21 is 4.526720455860785E-6 
+the 14 th value ofschwefel 2.21 is 1.1696566441310802E-5 
+the 15 th value ofschwefel 2.21 is 6.592376479694595E-6 
+the 16 th value ofschwefel 2.21 is 7.332363985453171E-6 
+the 17 th value ofschwefel 2.21 is 7.753349238447088E-6 
+the 18 th value ofschwefel 2.21 is 4.97954265372291E-6 
+the 19 th value ofschwefel 2.21 is 1.0731258647298902E-5 
+the 20 th value ofschwefel 2.21 is 7.83284933974192E-6 
+the 21 th value ofschwefel 2.21 is 1.0534732621503698E-5 
+the 22 th value ofschwefel 2.21 is 7.5066449046482035E-6 
+the 23 th value ofschwefel 2.21 is 4.769336153319172E-6 
+the 24 th value ofschwefel 2.21 is 5.9831895789762595E-6 
+the 25 th value ofschwefel 2.21 is 9.514148360954799E-6 
+the 26 th value ofschwefel 2.21 is 4.428550761090493E-6 
+the 27 th value ofschwefel 2.21 is 5.680321718091911E-6 
+the 28 th value ofschwefel 2.21 is 7.064464037969186E-6 
+the 29 th value ofschwefel 2.21 is 4.028337179513566E-6 
+the best value of schwefel 2.21 is 1.424816679274307E-6
+the worst value of schwefel 2.21 is 1.3636486846699246E-5
+the average value of schwefel 2.21 is 7.830418350820934E-6
+the 0 th value ofrosenBrock is 5.923549450499263E-9 
+the 1 th value ofrosenBrock is 8.938564151766026E-10 
+the 2 th value ofrosenBrock is 5.655699028474101E-10 
+the 3 th value ofrosenBrock is 5.215064677562243E-9 
+the 4 th value ofrosenBrock is 6.7455679905101945E-9 
+the 5 th value ofrosenBrock is 9.079889933232981E-9 
+the 6 th value ofrosenBrock is 3.572656105046525E-9 
+the 7 th value ofrosenBrock is 3.1006967223782023E-10 
+the 8 th value ofrosenBrock is 4.63099058217474E-9 
+the 9 th value ofrosenBrock is 5.89688520653091E-9 
+the 10 th value ofrosenBrock is 5.133919405910525E-9 
+the 11 th value ofrosenBrock is 4.42887358113339E-10 
+the 12 th value ofrosenBrock is 5.92419251559849E-9 
+the 13 th value ofrosenBrock is 1.5576913208158294E-8 
+the 14 th value ofrosenBrock is 3.034529520538811E-9 
+the 15 th value ofrosenBrock is 3.3223572804732982E-9 
+the 16 th value ofrosenBrock is 3.9417247932886236E-9 
+the 17 th value ofrosenBrock is 5.89013815275613E-9 
+the 18 th value ofrosenBrock is 3.729987365265859E-9 
+the 19 th value ofrosenBrock is 5.62404157464117E-9 
+the 20 th value ofrosenBrock is 3.899090695277031E-10 
+the 21 th value ofrosenBrock is 1.3416370048274747E-9 
+the 22 th value ofrosenBrock is 6.414364121334665E-9 
+the 23 th value ofrosenBrock is 1.4426263959656333E-9 
+the 24 th value ofrosenBrock is 6.5975122804989216E-9 
+the 25 th value ofrosenBrock is 1.404245732691463E-9 
+the 26 th value ofrosenBrock is 9.870932249886668E-9 
+the 27 th value ofrosenBrock is 2.5246595650464663E-9 
+the 28 th value ofrosenBrock is 2.4326119828519743E-10 
+the 29 th value ofrosenBrock is 9.630039234182643E-9 
+the best value of rosenBrock is 2.4326119828519743E-10
+the worst value of rosenBrock is 1.5576913208158294E-8
+the average value of rosenBrock is 4.510465932093669E-9
+the 0 th value ofstep is 0.0 
+the 1 th value ofstep is 0.0 
+the 2 th value ofstep is 0.0 
+the 3 th value ofstep is 0.0 
+the 4 th value ofstep is 0.0 
+the 5 th value ofstep is 0.0 
+the 6 th value ofstep is 0.0 
+the 7 th value ofstep is 0.0 
+the 8 th value ofstep is 0.0 
+the 9 th value ofstep is 0.0 
+the 10 th value ofstep is 0.0 
+the 11 th value ofstep is 0.0 
+the 12 th value ofstep is 0.0 
+the 13 th value ofstep is 0.0 
+the 14 th value ofstep is 0.0 
+the 15 th value ofstep is 0.0 
+the 16 th value ofstep is 0.0 
+the 17 th value ofstep is 0.0 
+the 18 th value ofstep is 0.0 
+the 19 th value ofstep is 0.0 
+the 20 th value ofstep is 0.0 
+the 21 th value ofstep is 0.0 
+the 22 th value ofstep is 0.0 
+the 23 th value ofstep is 0.0 
+the 24 th value ofstep is 0.0 
+the 25 th value ofstep is 0.0 
+the 26 th value ofstep is 0.0 
+the 27 th value ofstep is 0.0 
+the 28 th value ofstep is 0.0 
+the 29 th value ofstep is 0.0 
 the best value of step is 0.0
 the worst value of step is 0.0
 the average value of step is 0.0
-the best value of quarticWithNoise is 2.622989483721196E-6
-the worst value of quarticWithNoise is 0.003971358648012978
-the average value of quarticWithNoise is 0.0014064682962461805
-the best value of rastrign is 2.35947741344944E-8
-the worst value of rastrign is 12.934432466356593
-the average value of rastrign is 4.211988490869792
-the best value of ackley is 5.965113640815645E-6
-the worst value of ackley is 2.9582796105283404
-the average value of ackley is 0.5226370754193028
-the best value of griewank is 0.007396040350775013
-the worst value of griewank is 0.04930611742507074
-the average value of griewank is 0.02103568449774521
-the best value of penalized is 4.4372769616608294E-12
-the worst value of penalized is 1.0507130902353797E-10
-the average value of penalized is 3.568047268205749E-11
-the best value of penalized2 is 1.1803852587759375E-11
-the worst value of penalized2 is 0.10986721998194954
-the average value of penalized2 is 0.015579273499417574
+the 0 th value ofquarticWithNoise is 0.0025925406984030203 
+the 1 th value ofquarticWithNoise is 0.001796419492319395 
+the 2 th value ofquarticWithNoise is 4.306155583798322E-5 
+the 3 th value ofquarticWithNoise is 0.0015983759612353274 
+the 4 th value ofquarticWithNoise is 8.808400834259954E-4 
+the 5 th value ofquarticWithNoise is 6.919912128070964E-4 
+the 6 th value ofquarticWithNoise is 8.698731826182308E-5 
+the 7 th value ofquarticWithNoise is 7.615281699097035E-4 
+the 8 th value ofquarticWithNoise is 0.0011799891363343336 
+the 9 th value ofquarticWithNoise is 9.83253995094418E-4 
+the 10 th value ofquarticWithNoise is 0.001981159262565122 
+the 11 th value ofquarticWithNoise is 0.0027800323316315 
+the 12 th value ofquarticWithNoise is 0.003095439772798491 
+the 13 th value ofquarticWithNoise is 0.0010927412926842396 
+the 14 th value ofquarticWithNoise is 0.0014010143247531876 
+the 15 th value ofquarticWithNoise is 0.0028204355198571465 
+the 16 th value ofquarticWithNoise is 2.2900047333597966E-4 
+the 17 th value ofquarticWithNoise is 8.325081182040424E-4 
+the 18 th value ofquarticWithNoise is 0.0013591523831109598 
+the 19 th value ofquarticWithNoise is 0.002478696646063631 
+the 20 th value ofquarticWithNoise is 0.0027234559303383156 
+the 21 th value ofquarticWithNoise is 0.0013870246451454943 
+the 22 th value ofquarticWithNoise is 0.0015618063094700264 
+the 23 th value ofquarticWithNoise is 0.0021228372095929045 
+the 24 th value ofquarticWithNoise is 0.0013487206888715896 
+the 25 th value ofquarticWithNoise is 0.0010518463683116448 
+the 26 th value ofquarticWithNoise is 3.2068046592326454E-4 
+the 27 th value ofquarticWithNoise is 6.687897449274518E-5 
+the 28 th value ofquarticWithNoise is 0.001364241184439851 
+the 29 th value ofquarticWithNoise is 9.13647245785084E-5 
+the best value of quarticWithNoise is 4.306155583798322E-5
+the worst value of quarticWithNoise is 0.003095439772798491
+the average value of quarticWithNoise is 0.001357467474993258
+the 0 th value ofrastrign is 3.979831206277927 
+the 1 th value ofrastrign is 1.989918115215092 
+the 2 th value ofrastrign is 0.9949590694218511 
+the 3 th value ofrastrign is 1.9899181263855983 
+the 4 th value ofrastrign is 4.974790252431452 
+the 5 th value ofrastrign is 4.974790258525379 
+the 6 th value ofrastrign is 2.984877198093729 
+the 7 th value ofrastrign is 8.954621464045454 
+the 8 th value ofrastrign is 5.9697493417352305 
+the 9 th value ofrastrign is 4.974790256203265 
+the 10 th value ofrastrign is 2.98487720553587 
+the 11 th value ofrastrign is 0.9949590641479844 
+the 12 th value ofrastrign is 5.969749323379249 
+the 13 th value ofrastrign is 3.979831193433631 
+the 14 th value ofrastrign is 10.944519382729693 
+the 15 th value ofrastrign is 5.969749325608794 
+the 16 th value ofrastrign is 3.9517356498208756E-8 
+the 17 th value ofrastrign is 4.974790259147028 
+the 18 th value ofrastrign is 4.97479026761145 
+the 19 th value ofrastrign is 1.989918122714391 
+the 20 th value ofrastrign is 1.9899181219981816 
+the 21 th value ofrastrign is 1.9899181336623037 
+the 22 th value ofrastrign is 3.979831216381344 
+the 23 th value ofrastrign is 5.969749344773966 
+the 24 th value ofrastrign is 5.969749329091508 
+the 25 th value ofrastrign is 3.979831220569624 
+the 26 th value ofrastrign is 2.984877203469143 
+the 27 th value ofrastrign is 1.9899181447151975 
+the 28 th value ofrastrign is 2.984877185196803 
+the 29 th value ofrastrign is 4.974790262309989 
+the best value of rastrign is 3.9517356498208756E-8
+the worst value of rastrign is 10.944519382729693
+the average value of rastrign is 4.046162987810949
+the 0 th value ofackley is 3.126375880357912E-5 
+the 1 th value ofackley is 2.066429838665229E-5 
+the 2 th value ofackley is 3.2567121213578076E-5 
+the 3 th value ofackley is 8.646378799159748E-6 
+the 4 th value ofackley is 1.4006934041521646E-5 
+the 5 th value ofackley is 2.1200533632485734 
+the 6 th value ofackley is 3.119570451959319E-5 
+the 7 th value ofackley is 1.8947558857451696E-5 
+the 8 th value ofackley is 2.1200533627921065 
+the 9 th value ofackley is 1.8350735186078992E-5 
+the 10 th value ofackley is 1.1764511925083099E-5 
+the 11 th value ofackley is 2.1200533639525045 
+the 12 th value ofackley is 2.9376671069503146E-5 
+the 13 th value ofackley is 2.5942800274680877E-5 
+the 14 th value ofackley is 2.7210892679097043E-5 
+the 15 th value ofackley is 4.382240161548978E-5 
+the 16 th value ofackley is 2.120053362802459 
+the 17 th value ofackley is 1.1676209993982667E-5 
+the 18 th value ofackley is 1.8313258320024062E-5 
+the 19 th value ofackley is 2.6915719147257988E-5 
+the 20 th value ofackley is 1.77733832384952E-5 
+the 21 th value ofackley is 1.4299534133233038E-5 
+the 22 th value ofackley is 2.120053362698432 
+the 23 th value ofackley is 2.1200533617508417 
+the 24 th value ofackley is 3.07780150063941E-5 
+the 25 th value ofackley is 2.1200533619701543 
+the 26 th value ofackley is 9.730747422498354E-6 
+the 27 th value ofackley is 9.579725962272079E-6 
+the 28 th value ofackley is 1.9030892876248373E-5 
+the 29 th value ofackley is 1.6050943724810196E-5 
+the best value of ackley is 8.646378799159748E-6
+the worst value of ackley is 2.1200533639525045
+the average value of ackley is 0.4946953815804086
+the 0 th value ofgriewank is 0.012320988892432494 
+the 1 th value ofgriewank is 0.022185660881512748 
+the 2 th value ofgriewank is 0.029576773617117746 
+the 3 th value ofgriewank is 1.7629009363417936E-11 
+the 4 th value ofgriewank is 0.007396040374789581 
+the 5 th value ofgriewank is 0.012320988944505396 
+the 6 th value ofgriewank is 0.019719489274030666 
+the 7 th value ofgriewank is 0.009857284643479458 
+the 8 th value ofgriewank is 0.029576773632532083 
+the 9 th value ofgriewank is 0.022185660872403035 
+the 10 th value ofgriewank is 0.01971948929075762 
+the 11 th value ofgriewank is 0.02218566088751861 
+the 12 th value ofgriewank is 0.012320988887057127 
+the 13 th value ofgriewank is 0.02712538440320922 
+the 14 th value ofgriewank is 0.0123209888972996 
+the 15 th value ofgriewank is 0.02957677368589051 
+the 16 th value ofgriewank is 0.022185660872713897 
+the 17 th value ofgriewank is 0.04930611749174629 
+the 18 th value ofgriewank is 0.04930611745534419 
+the 19 th value ofgriewank is 0.009857284642103115 
+the 20 th value ofgriewank is 0.02958662863285022 
+the 21 th value ofgriewank is 0.009857284626493823 
+the 22 th value ofgriewank is 0.04930611742659918 
+the 23 th value ofgriewank is 0.029576773618333885 
+the 24 th value ofgriewank is 0.022185660900999493 
+the 25 th value ofgriewank is 0.009857284666382027 
+the 26 th value ofgriewank is 0.019719489301088244 
+the 27 th value ofgriewank is 0.009857284683966738 
+the 28 th value ofgriewank is 0.009864672073347847 
+the 29 th value ofgriewank is 0.00985728462072577 
+the best value of griewank is 1.7629009363417936E-11
+the worst value of griewank is 0.04930611749174629
+the average value of griewank is 0.02062375360716199
+the 0 th value ofpenalized is 1.6853036361942587E-11 
+the 1 th value ofpenalized is 2.5808043709915454E-11 
+the 2 th value ofpenalized is 1.9232677218103984E-11 
+the 3 th value ofpenalized is 4.709179214024107E-12 
+the 4 th value ofpenalized is 7.353850718637501E-11 
+the 5 th value ofpenalized is 2.4686986045105538E-11 
+the 6 th value ofpenalized is 5.191924846861402E-11 
+the 7 th value ofpenalized is 1.0470796700127906E-11 
+the 8 th value ofpenalized is 3.045474919442236E-11 
+the 9 th value ofpenalized is 2.9618409828850544E-11 
+the 10 th value ofpenalized is 2.1780843082489993E-12 
+the 11 th value ofpenalized is 2.051091137772921E-12 
+the 12 th value ofpenalized is 3.901511341136268E-11 
+the 13 th value ofpenalized is 5.439246078166763E-11 
+the 14 th value ofpenalized is 1.6889892469354333E-11 
+the 15 th value ofpenalized is 1.678174091282326E-11 
+the 16 th value ofpenalized is 2.4155606491141397E-11 
+the 17 th value ofpenalized is 2.641489378044601E-11 
+the 18 th value ofpenalized is 3.823244780680299E-11 
+the 19 th value ofpenalized is 2.4183443433237934E-11 
+the 20 th value ofpenalized is 1.9021190248164215E-12 
+the 21 th value ofpenalized is 4.1473314327036124E-11 
+the 22 th value ofpenalized is 2.5492845695952675E-11 
+the 23 th value ofpenalized is 8.788229317097329E-12 
+the 24 th value ofpenalized is 1.0366902027372176 
+the 25 th value ofpenalized is 4.0329162892861667E-11 
+the 26 th value ofpenalized is 2.2389123076396903E-11 
+the 27 th value ofpenalized is 2.3107115454264057E-11 
+the 28 th value ofpenalized is 4.0067395111850515E-11 
+the 29 th value ofpenalized is 8.027245300209454E-12 
+the best value of penalized is 1.9021190248164215E-12
+the worst value of penalized is 1.0366902027372176
+the average value of penalized is 0.03455634011601268
+the 0 th value ofpenalized2 is 1.614790031002193E-11 
+the 1 th value ofpenalized2 is 0.021023765822325985 
+the 2 th value ofpenalized2 is 3.349331416852816E-11 
+the 3 th value ofpenalized2 is 1.4473944890143628E-11 
+the 4 th value ofpenalized2 is 2.0107940976033895E-11 
+the 5 th value ofpenalized2 is 0.021023765970012907 
+the 6 th value ofpenalized2 is 1.4236924162210674E-11 
+the 7 th value ofpenalized2 is 0.010987365881652883 
+the 8 th value ofpenalized2 is 7.207393477740309E-11 
+the 9 th value ofpenalized2 is 7.624505531338569E-11 
+the 10 th value ofpenalized2 is 0.02102376607771619 
+the 11 th value ofpenalized2 is 3.010700318774892E-11 
+the 12 th value ofpenalized2 is 1.4393769076118E-11 
+the 13 th value ofpenalized2 is 3.0452725773357235E-11 
+the 14 th value ofpenalized2 is 0.021023765878711735 
+the 15 th value ofpenalized2 is 3.078368792873098E-12 
+the 16 th value ofpenalized2 is 0.010987365938636112 
+the 17 th value ofpenalized2 is 1.0175929262128487E-10 
+the 18 th value ofpenalized2 is 0.021023765820338772 
+the 19 th value ofpenalized2 is 0.010987365877874643 
+the 20 th value ofpenalized2 is 5.532747856445089E-11 
+the 21 th value ofpenalized2 is 9.412531924054373E-11 
+the 22 th value ofpenalized2 is 9.43698670571744E-11 
+the 23 th value ofpenalized2 is 2.2743237820484758E-11 
+the 24 th value ofpenalized2 is 5.160160914797395E-11 
+the 25 th value ofpenalized2 is 0.021023765822371063 
+the 26 th value ofpenalized2 is 0.021023765861685723 
+the 27 th value ofpenalized2 is 0.010987365966778323 
+the 28 th value ofpenalized2 is 1.164626590869355E-11 
+the 29 th value ofpenalized2 is 0.010987365991003311 
+the best value of penalized2 is 3.078368792873098E-12
+the worst value of penalized2 is 0.02102376607771619
+the average value of penalized2 is 0.006736773055516385
+the 0 the value of schewefel 2.6 is -Infinity
+the 1 the value of schewefel 2.6 is -Infinity
+the 2 the value of schewefel 2.6 is -2.723365180078043E15
+the 3 the value of schewefel 2.6 is -Infinity
+the 4 the value of schewefel 2.6 is -8.4669397942107116E18
+the 5 the value of schewefel 2.6 is -1.07270825674091104E17
+the 6 the value of schewefel 2.6 is -Infinity
+the 7 the value of schewefel 2.6 is -5.978312858480844E15
+the 8 the value of schewefel 2.6 is -Infinity
+the 9 the value of schewefel 2.6 is -Infinity
+the 10 the value of schewefel 2.6 is -Infinity
+the 11 the value of schewefel 2.6 is -Infinity
+the 12 the value of schewefel 2.6 is -Infinity
+the 13 the value of schewefel 2.6 is -1.49374466360061184E18
+the 14 the value of schewefel 2.6 is -1.65318917272862208E17
+the 15 the value of schewefel 2.6 is -Infinity
+the 16 the value of schewefel 2.6 is -Infinity
+the 17 the value of schewefel 2.6 is -Infinity
+the 18 the value of schewefel 2.6 is -2.211976190298994E16
+the 19 the value of schewefel 2.6 is -Infinity
+the 20 the value of schewefel 2.6 is -Infinity
+the 21 the value of schewefel 2.6 is -Infinity
+the 22 the value of schewefel 2.6 is -4.9388815392685363E17
+the 23 the value of schewefel 2.6 is -Infinity
+the 24 the value of schewefel 2.6 is -Infinity
+the 25 the value of schewefel 2.6 is -Infinity
+the 26 the value of schewefel 2.6 is -2.0658501342128418E15
+the 27 the value of schewefel 2.6 is -Infinity
+the 28 the value of schewefel 2.6 is -Infinity
+the 29 the value of schewefel 2.6 is -Infinity
 the best value of schwefel 2.6 is -Infinity
-the worst value of schewefel 2.6 is -8.793924455808719E10
+the worst value of schewefel 2.6 is -2.0658501342128418E15
 the average value of schewefel 2.6 is -Infinity
 
 Process finished with exit code 0
