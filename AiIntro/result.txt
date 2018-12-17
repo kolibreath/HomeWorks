@@ -1,0 +1,85 @@
+:the improved algorithm of Kolibreath
+------------------------------------------------------------------------
+the worst value of sphere is 6.006466819196023E-13
+the average value of sphere is 6.671587037534125E-14
+the best value of schwefel 2.22 is 6.49828813657942E-11
+the worst value of schwefel 2.22 is 1.4734581334432668E-6
+the average value of schwefel 2.22 is 1.3137998665542637E-7
+the best value of schwefel 1.2 is 7.032712157681673E-34
+the worst value of schwefel 1.2 is 2.2389380593036012E-21
+the average value of schwefel 1.2 is 9.301292927090474E-23
+the best value of schwefel 2.21 is 2.769439811730419E-10
+the worst value of schwefel 2.21 is 2.5768638357157222E-5
+the average value of schwefel 2.21 is 1.7115220516027542E-6
+the best value of rosenBrock is 5.2164706547225E-16
+the worst value of rosenBrock is 1.7587084135029126E-5
+the average value of rosenBrock is 5.959613175433561E-7
+the best value of step is 0.0
+the worst value of step is 0.0
+the average value of step is 0.0
+the best value of quarticWithNoise is 9.911455802334441E-6
+the worst value of quarticWithNoise is 0.0021444285276927297
+the average value of quarticWithNoise is 4.998358698476425E-4
+the best value of rastrign is 0.0
+the worst value of rastrign is 1.989918114598975
+the average value of rastrign is 0.5306448305228627
+the best value of ackley is 1.1291989565620497E-10
+the worst value of ackley is 1.0645512276585833E-5
+the average value of ackley is 5.22142059929583E-7
+the best value of griewank is 0.0
+the worst value of griewank is 2.1373680603176126E-11
+the average value of griewank is 9.97365153428594E-13
+the best value of penalized is 1.0288304286309753E-16
+the worst value of penalized is 8.807909242618312E-5
+the average value of penalized is 3.4435836252030043E-6
+the best value of penalized2 is 2.4929323574476024E-17
+the worst value of penalized2 is 7.737593719223977E-8
+the average value of penalized2 is 2.8294498795098813E-9
+the best value of schwefel 2.6 is -1256.9486618078993
+the worst value of schwefel 2.6 is -1256.9486618078993
+the average value of schwefel 2.6 is -1256.9486618078995
+
+:Native Bat Algorithm 
+--------------------------------------------------------------------------
+the best value of sphere is 4.045201435267368E-12
+the worst value of sphere is 2.072444997684398E-10
+the average value of sphere is 9.203653075735043E-11
+the best value of schwefel 2.22 is 4.5759939347117695E-6
+the worst value of schwefel 2.22 is 2.496548945925722E-5
+the average value of schwefel 2.22 is 1.623684143853519E-5
+the best value of schwefel 1.2 is 2.468745082466339E-15
+the worst value of schwefel 1.2 is 2.397585838479127E-12
+the average value of schwefel 1.2 is 5.453421145395754E-13
+the best value of schwefel 2.21 is 2.739463859303946E-6
+the worst value of schwefel 2.21 is 1.1261450956488788E-5
+the average value of schwefel 2.21 is 7.193445668201976E-6
+the best value of rosenBrock is 5.826013632116897E-10
+the worst value of rosenBrock is 1.1457502499720761E-8
+the average value of rosenBrock is 4.744552816527875E-9
+the best value of step is 0.0
+the worst value of step is 0.0
+the average value of step is 0.0
+the best value of quarticWithNoise is 2.622989483721196E-6
+the worst value of quarticWithNoise is 0.003971358648012978
+the average value of quarticWithNoise is 0.0014064682962461805
+the best value of rastrign is 2.35947741344944E-8
+the worst value of rastrign is 12.934432466356593
+the average value of rastrign is 4.211988490869792
+the best value of ackley is 5.965113640815645E-6
+the worst value of ackley is 2.9582796105283404
+the average value of ackley is 0.5226370754193028
+the best value of griewank is 0.007396040350775013
+the worst value of griewank is 0.04930611742507074
+the average value of griewank is 0.02103568449774521
+the best value of penalized is 4.4372769616608294E-12
+the worst value of penalized is 1.0507130902353797E-10
+the average value of penalized is 3.568047268205749E-11
+the best value of penalized2 is 1.1803852587759375E-11
+the worst value of penalized2 is 0.10986721998194954
+the average value of penalized2 is 0.015579273499417574
+the best value of schwefel 2.6 is -Infinity
+the worst value of schewefel 2.6 is -8.793924455808719E10
+the average value of schewefel 2.6 is -Infinity
+
+Process finished with exit code 0
+
