@@ -1,0 +1,33 @@
+#p_container
+{
+    background-color: aqua;
+}
+
+#t_container
+{
+    text-emphasis-color: aqua;
+    text-decoration: underline;
+}
+
+#bat_container
+{
+    font-size: 40px;
+}
+
+#scroll_container
+{
+    text-emphasis-color: blue;
+    font-size: 20px;
+    font-family: ".SF NS Display";
+}
+
+#check_container
+{
+    font-size: 50px;
+    text-decoration:aqua ;
+}
+
+#login_container
+{
+    font-size: 40px;
+}
